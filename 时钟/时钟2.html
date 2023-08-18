@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1> 时钟学习 2 </h1>
+  <div id="show-time-1"> </div>
+  <div id="show-time-2"> </div>
+  <script>
+    //
+  function  huoqu_shijian(){
+    var now = new Date();
+   //年
+    let nian =now.getFullYear()
+    //月  // 少 1
+    let yue =now.getMonth()   +1 
+    //日
+    let ri =now.getDate()
+    //时
+    let shi = now.getHours()
+    //分
+     let fen=now.getMinutes()
+    //秒
+    let miao =now.getSeconds()
+    if(shi<10){
+      shi ='0'+shi
+    }
+    if(fen<10){
+      fen ='0'+fen
+    }
+    if(miao<10){
+      miao ='0'+miao
+    }
+      // 文字 拼接 
+    let  str = "  年："+nian +"  月："+yue+"   日："+ri+"  时："+shi+"  分："+fen+"  秒："+miao
+    let str2= `${nian}年${yue}月${ri}日  ${shi}:${fen}:${miao}`
+    document.getElementById('show-time-1').innerText=str
+    document.getElementById('show-time-2').innerText=str2
+  }
+  huoqu_shijian()
+  setInterval(function(){
+    huoqu_shijian()
+  },1000)
+  </script>
+</body>
+</html>
