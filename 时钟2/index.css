@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  min-height: 100vh;
+  background: linear-gradient(
+  to top,
+  #d3d3d3 0%
+  #e0e0e0 25%
+  #efefef 50%
+  #d9d9d9 75%
+  #bcbcbc 100%
+  );
+}
+
+.box {
+  color: #1e1e22;
+  --color-active:#ff0000;
+  --number-thickness:1.5vmin;
+  --number-lenght:4.5vmin;
+  --number-gap:0.1vmin;
+  display: flex;
+  gap: calc(var(--number-thickness) * 1.5);
+  background-color: #060606;
+  border: calc(var(--number-thickness) * 1.5) solid #363636;
+  border-radius: calc(var(--number-thickness) * 3);
+  padding: calc(var(--number-thickness) * 2);
+  box-shadow: 0 6vmin 20vmin rgba(0,0,0,0.6);
+}
+
+.colon {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: calc(var(--number-thickness) * 2.5);
+
+}
+
+.colon::before,
+.colon::after{
+  content: "";
+  width: var(--number-thickness);
+  height: var(--number-thickness);
+  border-radius: 50%;
+  background-color: var(--color-active);
+  filter: drop-shadow(0 0 1vmin var(--color-active));
+}
+
+.box .number {
+  display: grid;
+  gap: var(--number-gap);
+  grid-template:
+   ".... r1c2 ...." var(--number-thickness)
+   "r2c1 .... r2c3" var(--number-lenght)
+   ".... r3c2 ...." var(--number-thickness)
+   "r4c1 .... r4c3" var(--number-lenght)
+   ".... r5c2 ...." var(--number-thickness) / 
+   var(--number-thickness) var(--number-lenght) var(--number-thickness);
+}
