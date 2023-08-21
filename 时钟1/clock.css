@@ -11,8 +11,8 @@ body{
 }
 
 #clock{
-  color: #fff;
+  color: #4e2d8c;
   font-size: 100px;
   font-family: 'Share Tech Mono';
-text-shadow: 0 0 20px pink, 0 2px 0 rgb(38, 132, 98);
+  text-shadow: 0 0 20px pink, 0 2px 0 rgb(38, 132, 98);
 }
