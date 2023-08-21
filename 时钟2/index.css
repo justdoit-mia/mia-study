@@ -55,7 +55,9 @@ body {
 
 .box .number {
   display: grid;
+  /* 数字单个 led灯 之间的间距 */
   gap: var(--number-gap);
+  /* 使用grid-template 来布局7个led灯的位置大小 */
   grid-template:
    ".... r1c2 ...." var(--number-thickness)
    "r2c1 .... r2c3" var(--number-lenght)
@@ -63,4 +65,20 @@ body {
    "r4c1 .... r4c3" var(--number-lenght)
    ".... r5c2 ...." var(--number-thickness) / 
    var(--number-thickness) var(--number-lenght) var(--number-thickness);
+}
+
+.box .number span {
+/* 每个led灯的元素  */
+  grid-area: var(--ga-name);
+  /* 数字基础色 */
+  background-color: var(--color);
+  /* 圆角 */
+  border-radius: var(--number-thickness);
+} 
+
+.box .number span.active {
+  /* 数字亮起来的颜色 */
+  background-color: var(--color-active);
+  /* 灯光亮起来的一点扩散阴影 */
+  filter: drop-shadow(0 0 0.75vmin var(--color-active));
 }
