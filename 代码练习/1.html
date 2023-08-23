@@ -161,9 +161,196 @@ function myFuntion()
 
 <!-- 数字字面量
 可以是整数或小数 -->
+<p id="demo"></p>
 <script>
-  let a = 123e5
-  console.log(a);
+document.getElementById("demo").innerHTML = 123e5
 </script>
+
+<!-- 字符串字面量 -->
+<p id="demo"></p>
+<script>
+document.getElementById("demo").innerHTML = 'John Doe'
+</script>
+
+<!-- 表达式字面量 -->
+<script>
+  let a = 5 + 6
+  let b = 5 * 10   
+ console.log(b);                                                                           
+</script>
+
+<!-- js语句 -->
+<p id="demo"></p>
+<script>
+    document.getElementById("demo").innerHTML="你好 Dolly"
+</script>
+
+<!-- 分号； -->
+<script> 
+  1.
+  a = 5;
+  b = 6;
+ c =a+b;
+console.log(c);
+2.
+a = 5;b = 6;c = a+b;
+console.log(c);
+</script>
+
+
+<!-- js代码 -->
+<p id="demo">你好 Dolly</p>
+<div id="myDIV">你最近怎样</div>
+<script>
+document.getElementById("demo").innerHTML="你好 Dolly"
+document.getElementById("myDIV").innerHTML="你最近怎样"
+</script>
+
+
+
+<!-- 代码块 -->
+<p id="myPar">我是第一个段落</p>
+<div id="myDIV">我是一个DIV</div>
+<p>
+  <button type="button" onclick="myFunction()">点击这里</button>
+</p>
+<script>
+  function myFunction() {
+    document.getElementById("myPar").innerHTML="你好 Dolly"
+    document.getElementById("myDIV").innerHTML="你最近怎样"
+  }
+</script>
+<p>点击按钮，两个元素会改变</p>
+
+
+<!-- 对代码行进行折行 -->
+<script>
+  document.write("你好\
+  世界！")
+</script>
+
+<!-- js变量 -->
+<script>
+  var x = 5;
+  var y = 6;
+  var z = x+y;
+  document.write(x + "<br>");
+  document.write(y + "<br>");
+  document.write(z + "<br>");
+</script>
+
+ <!-- 数据类型 -->
+<script>
+  var pi = 3.14;
+  var person ="John Doe" 
+  var answer = "Yes I am!"
+  document.write(pi + "<br>")
+  document.write(person + "<br>")
+  document.write(answer  + "<br>")
+</script>
+ <p>点击来创建变量，并显示结果。</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+<script>
+function myFunction(){
+  var carname="Volvo";
+  document.getElementById("demo").innerHTML=carname;
+}
+</script>
+
+ <!-- js算数 -->
+<p>假设y=5,计算x=y12,并显示结果。</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+<script>
+  function myFunction(){
+    var y=5;
+    var x=y+2;
+    var demoP=document.getElementById("demo");
+  demoP.innerHTML="x=" + x;
+ }
+ </script>
+
+ <!-- js 拥有动态类型 -->
+<p>typeof 操作符返回变量或表达式的类型</p>
+<p id="demo"></p>
+<script>
+  document.getElementById("demo").innerHTML = 
+    typeof "john" + "<br>" + 
+    typeof 3.14 + "<br>" +
+    typeof false + "<br>" +
+    typeof [1,2,3,4] + "<br>" +
+    typeof {name:'john', age:34};
+  </script>
+
+  <!-- 字符串 -->
+<script>
+  var carname1="Volvo XC60";
+  var carname2='Volvo XC60';
+  document.write(carname1+"<br>")
+  document.write(carname2+"<br>")
+ </script>
+
+ <!-- js 数字 -->
+<script>
+var x1=34.00;
+var x2=34;
+var y=123e5;
+var z=123e-5;
+document.write(x1 + "<br>")
+document.write(x2 + "<br>")
+document.write(y + "<br>")
+document.write(z + "<br>")
+</script>
+
+ <!-- 布尔 数组 -->
+ <script>
+  var i ;
+  var cars = new Array();
+  cars[0] = "Saab";
+  cars[1] = "Volvo";
+  for (i=0; i<cars.length;i++)
+  {
+    document.write(cars[i] + "<br>")
+  }
+ </script>
+
+ <!-- 对象 -->
+ <script>
+  var person=
+{
+  firstname : "John",
+  lastname  : "Doe",
+  id        :  5566
+ };
+ document.write(person.lastname + "<br>");
+ document.write(person["lastname"] + "<br>");
+ </script>
+
+ undefined和null
+ <script>
+  var person;
+  var car="Volvo";
+  document.write(person + "<br>")
+  document.write(car + "<br>")
+  var car = null
+  document.write(car + "<br>")
+ </script>
+
+  <!-- 创建和使用对象方法 -->
+  <p id="demo"></p>
+  <script>
+   var person = {
+      firstName: "John",
+      lastName : "Doe",
+      id : 5566,
+      fullName : function() 
+    {
+         return this.firstName + " " + this.lastName;
+      }
+   };
+   document.getElementById("demo").innerHTML = person.fullName(); 
+    </script>
+
 </body>
 </html>
