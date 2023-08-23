@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- js直接写入html输入流 -->
+ <p>
+    JavaScript 能够直接写入 HTML 输出流中：
+  </p>
+  <script>
+    document.write("<h1>这是一个标题</h1>")
+    document.write("<p>这是一个段落</p>")
+  </script>
+  <p>
+    您只能在 HTML 输出流中使用 <strong>document.write</strong>。
+如果您在文档已加载后使用它（比如在函数中），会覆盖整个文档
+  </p>
+
+js对事件的反应 
+  <h1>我的第一个 JavaScript</h1>
+  <p>
+    JavaScript 能够对事件作出反应。比如对按钮的点击：  
+  </p>
+  <button type="button" onclick="alert('欢迎！')">点我</button>
+
+
+  <!-- js改变html的内容 -->
+<h1> 我的第一段js</h1>
+<p id="demo">
+  js能改变html元素内容
+</p>
+<script>
+  function myFuntion()
+  {
+
+   x=document.getElementById("demo");
+   x.innerHTML="Hello JavaScript!";
+
+  }
+</script>
+<button type="button" onclick="myFunction()">点这里</button> 
+
+
+<!-- js改变html的样式 -->
+<h1> 我的第一段js</h1>
+<p id="demo"> mn
+0  js能改变html元素内容
+</p>
+<script>
+function myFuntion()
+{
+  x=document.getElementById("demo")
+  x.style.color="#ff0000";   
+
+}
+</script>
+<button type="button" onclick="myFunction()">点这里</button>
+
+
+<!-- js验证输入 -->
+ 1. <h1> 我的第一段js</h1>
+<p>请输入数字。如果输入值不是数字，浏览器会弹出提示框。</p>
+<input id="demo" type="text">
+<script>
+  function myFunction()
+  {
+    var x=document.getElementById("demo").value;
+    if(x==""||isNaN(x))
+    {
+      alert("不是数字");
+    }
+  }
+  </script>
+  <button type="button" onclick="myFunction()">点击这里</button>
+  2.<h1> 我的第一段js</h1>
+<p>请输入数字。如果输入值不是数字，浏览器会弹出提示框。</p>
+<input id="demo" type="text">
+<script>
+  function myFunction()
+  {
+    var x=document.getElementById("demo").value;
+   if (isNaN(x))x.replace(/(^\s*))|(\s*$)/g,"")
+   {alert("不是数字")
+   }
+  }
+  </script>
+  <button type="button" onclick="myFunction()">点击这里</button>
+
+<!-- script 标签 -->
+ <script>
+  alert("我的第一个js")
+</script> 
+
+ <!-- body中的 js -->
+ <script>
+  document.write("<h1>这是一个标题</h1>")
+  document.write("<p>这是一个段落</p>")
+</script>
+
+ 111 <h1>我的web页面</h1>
+<p id="demo">一个段落。</p>
+<button type="button" onclick="myFunction()">点击这里</button> 
+
+<!-- body中的js函数 -->
+<h1>我的web页面</h1>
+<p id="demo">一个段落。</p>
+<button type="button" onclick="myFunction()">尝试一下</button>
+<script>
+  function myFunction()
+  {
+    document.getElementById("demo").innerHTML="我的第一个js函数" ;
+  } 
+</script>
+
+
+<!-- 外部的js -->
+<script src="123.js">
+</script>
+
+<!-- 使用window.alert() -->
+<h1>这是一个页面</h1>
+<p>我的第一个段落</p>
+<script>
+  window.alert(5+6);
+</script>
+
+<!-- 操作html元素 -->
+<h1>我的第一个 Web 页面</h1>
+<P id="demo">我的第一个段落</P>
+<SCript>
+  document.getElementById("demo").innerHTML="段落已修改。"
+</SCript> 
+
+<!-- 写到html文件 -->
+ <h1>我的第一个 Web 页面</h1>
+<p>我的第一个段落</p>
+<script>
+  document.write(Date())
+</script> 
+
+ <h1>我的第一个 Web 页面</h1>
+<p>我的第一个段落</p> 
+<button onclick="myFunction()">点我</button>
+<script>
+  function myFunction(){
+    document.write(Date());
+  }
+</script> 
+
+<!-- 写到控制台 -->
+<h1>我的第一个 Web 页面</h1>
+<script>
+  a = 5
+  b = 6
+  c = a+b
+  console.log(c);
+</script>
+
+<!-- 数字字面量
+可以是整数或小数 -->
+<p id="demo"></p>
+<script>
+document.getElementById("demo").innerHTML = 123e5
+</script>
+
+<!-- 字符串字面量 -->
+<p id="demo"></p>
+<script>
+document.getElementById("demo").innerHTML = 'John Doe'
+</script>
+
+<!-- 表达式字面量 -->
+<script>
+  let a = 5 + 6
+  let b = 5 * 10   
+ console.log(b);                                                                           
+</script>
+
+<!-- js语句 -->
+<p id="demo"></p>
+<script>
+    document.getElementById("demo").innerHTML="你好 Dolly"
+</script>
+
+<!-- 分号； -->
+<script> 
+  1.
+  a = 5;
+  b = 6;
+ c =a+b;
+console.log(c);
+2.
+a = 5;b = 6;c = a+b;
+console.log(c);
+</script>
+
+
+<!-- js代码 -->
+<p id="demo">你好 Dolly</p>
+<div id="myDIV">你最近怎样</div>
+<script>
+document.getElementById("demo").innerHTML="你好 Dolly"
+document.getElementById("myDIV").innerHTML="你最近怎样"
+</script>
+
+
+
+<!-- 代码块 -->
+<p id="myPar">我是第一个段落</p>
+<div id="myDIV">我是一个DIV</div>
+<p>
+  <button type="button" onclick="myFunction()">点击这里</button>
+</p>
+<script>
+  function myFunction() {
+    document.getElementById("myPar").innerHTML="你好 Dolly"
+    document.getElementById("myDIV").innerHTML="你最近怎样"
+  }
+</script>
+<p>点击按钮，两个元素会改变</p>
+
+
+<!-- 对代码行进行折行 -->
+<script>
+  document.write("你好\
+  世界！")
+</script>
+
+<!-- js变量 -->
+<script>
+  var x = 5;
+  var y = 6;
+  var z = x+y;
+  document.write(x + "<br>");
+  document.write(y + "<br>");
+  document.write(z + "<br>");
+</script>
+
+ <!-- 数据类型 -->
+<script>
+  var pi = 3.14;
+  var person ="John Doe" 
+  var answer = "Yes I am!"
+  document.write(pi + "<br>")
+  document.write(person + "<br>")
+  document.write(answer  + "<br>")
+</script>
+ <p>点击来创建变量，并显示结果。</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+<script>
+function myFunction(){
+  var carname="Volvo";
+  document.getElementById("demo").innerHTML=carname;
+}
+</script>
+
+ <!-- js算数 -->
+<p>假设y=5,计算x=y12,并显示结果。</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+<script>
+  function myFunction(){
+    var y=5;
+    var x=y+2;
+    var demoP=document.getElementById("demo");
+  demoP.innerHTML="x=" + x;
+ }
+ </script>
+
+ <!-- js 拥有动态类型 -->
+<p>typeof 操作符返回变量或表达式的类型</p>
+<p id="demo"></p>
+<script>
+  document.getElementById("demo").innerHTML = 
+    typeof "john" + "<br>" + 
+    typeof 3.14 + "<br>" +
+    typeof false + "<br>" +
+    typeof [1,2,3,4] + "<br>" +
+    typeof {name:'john', age:34};
+  </script>
+
+  <!-- 字符串 -->
+<script>
+  var carname1="Volvo XC60";
+  var carname2='Volvo XC60';
+  document.write(carname1+"<br>")
+  document.write(carname2+"<br>")
+ </script>
+
+ <!-- js 数字 -->
+<script>
+var x1=34.00;
+var x2=34;
+var y=123e5;
+var z=123e-5;
+document.write(x1 + "<br>")
+document.write(x2 + "<br>")
+document.write(y + "<br>")
+document.write(z + "<br>")
+</script>
+
+ <!-- 布尔 数组 -->
+ <script>
+  var i ;
+  var cars = new Array();
+  cars[0] = "Saab";
+  cars[1] = "Volvo";
+  for (i=0; i<cars.length;i++)
+  {
+    document.write(cars[i] + "<br>")
+  }
+ </script>
+
+ <!-- 对象 -->
+ <script>
+  var person=
+{
+  firstname : "John",
+  lastname  : "Doe",
+  id        :  5566
+ };
+ document.write(person.lastname + "<br>");
+ document.write(person["lastname"] + "<br>");
+ </script>
+
+ undefined和null
+ <script>
+  var person;
+  var car="Volvo";
+  document.write(person + "<br>")
+  document.write(car + "<br>")
+  var car = null
+  document.write(car + "<br>")
+ </script>
+
+  <!-- 创建和使用对象方法 -->
+  <p id="demo"></p>
+  <script>
+   var person = {
+      firstName: "John",
+      lastName : "Doe",
+      id : 5566,
+      fullName : function() 
+    {
+         return this.firstName + " " + this.lastName;
+      }
+   };
+   document.getElementById("demo").innerHTML = person.fullName(); 
+    </script>
+
+</body>
+</html>
