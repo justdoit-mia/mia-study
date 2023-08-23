@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- js直接写入html输入流 -->
+  <p>
+    JavaScript 能够直接写入 HTML 输出流中：
+  </p>
+  <script>
+    document.write("<h1>这是一个标题</h1>")
+    document.write("<p>这是一个段落</p>")
+  </script>
+  <p>
+    您只能在 HTML 输出流中使用 <strong>document.write</strong>。
+如果您在文档已加载后使用它（比如在函数中），会覆盖整个文档
+  </p>
+
+
+<!-- js对事件的反应 -->
+  <h1>我的第一个 JavaScript</h1>
+  <p>
+    JavaScript 能够对事件作出反应。比如对按钮的点击：  
+  </p>
+  <button type="button" onclick="alert('欢迎！')">点我</button>
+
+
+  <!-- js改变html的内容 -->
+<h1> 我的第一段js</h1>
+<p id="demo">
+  js能改变html元素内容
+</p>
+<script>
+  function myFuntion()
+  {
+
+   x=document.getElementById("demo");
+   x.innerHTML="Hello JavaScript!";
+
+  }
+</script>
+<button type="button" onclick="myFunction()">点这里</button>
+
+
+<!-- js改变html的样式 -->
+<h1> 我的第一段js</h1>
+<p id="demo"> mn
+0  js能改变html元素内容
+</p>
+<script>
+function myFuntion()
+{
+  x=document.getElementById("demo")
+  x.style.color="#ff0000";   
+
+}
+</script>
+<button type="button" onclick="myFunction()">点这里</button>
+
+
+<!-- js验证输入 -->
+ 1. <h1> 我的第一段js</h1>
+<p>请输入数字。如果输入值不是数字，浏览器会弹出提示框。</p>
+<input id="demo" type="text">
+<script>
+  function myFunction()
+  {
+    var x=document.getElementById("demo").value;
+    if(x==""||isNaN(x))
+    {
+      alert("不是数字");
+    }
+  }
+  </script>
+  <button type="button" onclick="myFunction()">点击这里</button>
+  2.  
+  <h1> 我的第一段js</h1>
+<p>请输入数字。如果输入值不是数字，浏览器会弹出提示框。</p>
+<input id="demo" type="text">
+<script>
+  function myFunction()
+  {
+    var x=document.getElementById("demo").value;
+   if (isNaN(x))||x.replace(/(^\s*))|(\s*$)/g,"") {
+    alert("不是数字")
+   }
+  }
+  </script>
+  <button type="button" onclick="myFunction()">点击这里</button>
+
+<!-- 
+script 标签 -->
+ <script>
+  alert("我的第一个js")
+</script> 
+
+ <!-- body中的 js -->
+ <script>
+  document.write("<h1>这是一个标题</h1>")
+  document.write("<p>这是一个段落</p>")
+</script>
+
+ 111 <h1>我的web页面</h1>
+<p id="demo">一个段落。</p>
+<button type="button" onclick="myFunction()">点击这里</button> 
+
+<!-- body中的js函数 -->
+<h1>我的web页面</h1>
+<p id="demo">一个段落。</p>
+<button type="button" onclick="myFunction()">尝试一下</button>
+<script>
+  function myFunction()
+  {
+    document.getElementById("demo").innerHTML="我的第一个js函数"：
+  } 
+</script>
+
+
+<!-- 外部的js -->
+<script src="123.js"> -->
+<!-- </script>
+
+<!-- 使用window.alert() -->
+<h1>这是一个页面</h1>
+<p>我的第一个段落</p>
+<script>
+  window.alert(5+6);
+</script>
+
+<!-- 操作html元素 -->
+<h1>我的第一个 Web 页面</h1>
+<P id="demo">我的第一个段落</P>
+<SCript>
+  document.getElementById("demo").innerHTML="段落已修改。"
+</SCript> 
+
+<!-- 写到html文件 -->
+ <h1>我的第一个 Web 页面</h1>
+<p>我的第一个段落</p>
+<script>
+  document.write(Date())
+</script> 
+
+ <h1>我的第一个 Web 页面</h1>
+<p>我的第一个段落</p> 
+<button onclick="myFunction()">点我</button>
+<script>
+  function myFunction(){
+    document.write(Date());
+  }
+</script> 
+
+<!-- 写到控制台 -->
+<h1>我的第一个 Web 页面</h1>
+<script>
+  a = 5
+  b = 6
+  c = a+b
+  console.log(c);
+</script>
+
+<!-- 数字字面量
+可以是整数或小数 -->
+<script>
+  let a = 123e5
+  console.log(a);
+</script>
+</body>
+</html>
