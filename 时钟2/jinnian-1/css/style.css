@@ -1,0 +1,258 @@
+
+
+
+.min-lingjian{
+    position: relative;
+    width: 64px;
+    height: 20px; 
+  
+}
+
+
+.min-lingjian-left{
+    position: absolute;
+    
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 10px solid #A3FF18;
+    border-bottom: 10px solid transparent;
+}
+.un-active .min-lingjian-left{
+    border-right: 10px solid  #223807; 
+}
+
+.min-lingjian-mid{
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    top: 0px;
+    left: 10px;
+    background:  #A3FF18;
+    /* width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 10px solid #A3FF18;
+    border-bottom: 10px solid transparent; */
+
+ 
+}
+
+
+
+.un-active .min-lingjian-mid{
+    background:  #223807; 
+}
+
+ 
+/* .un-active{
+    background:  #ccc; 
+} */
+
+
+
+
+.min-lingjian-right{
+    position: absolute;
+  
+    top: 0;
+    left: 50px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    /* border-right: 10px solid transparent; */
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #A3FF18;
+
+}
+
+.un-active .min-lingjian-right{
+    border-left: 10px solid  #223807; 
+}
+
+.number-container{
+    position: relative;
+    width: 80px;
+    height: 140px;
+    /* border: 2px solid; */
+   
+}
+
+.number-lingjian-left-up{
+    position: absolute;
+    top: 34px;
+    left: -20px;
+    
+    z-index: 88;
+    /* transform-origin:50% 50%; */
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+
+
+.number-lingjian-left-down{
+    position: absolute;
+    top: 96px;
+    left: -20px;
+    
+    z-index: 88;
+    /* transform-origin:50% 50%; */
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+
+
+
+.number-lingjian-mid-up{
+    position: absolute;
+    top: 0px;
+    left:  14px;
+    
+    z-index: 88;
+    /* transform-origin:50% 50%;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg); */
+}
+
+.number-lingjian-mid-mid{
+    position: absolute;
+    top: 63px;
+    left:  14px;
+    
+    z-index: 88; 
+}
+
+.number-lingjian-mid-down{
+    position: absolute;
+    top: 126px;
+    left:  14px;
+    
+    z-index: 88; 
+}
+
+.number-lingjian-right-up{
+    position: absolute;
+    top: 34px;
+    left: 44px;
+    
+    z-index: 88;
+    /* transform-origin:50% 50%; */
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+
+}
+
+.number-lingjian-right-down{
+    position: absolute;
+    top: 96px;
+    left: 44px;
+    
+    z-index: 88;
+    /* transform-origin:50% 50%; */
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+
+
+
+
+.dot-container {
+    position: relative;
+    width: 30px;
+    height: 140px;
+    /* border: 2px solid; */
+   
+}
+
+.dot-top{
+    position: absolute;
+    top: 50px;
+    left: 15px;
+    width: 12px;
+    height: 12px;
+   
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.dot-bottom{
+    position: absolute;
+    top:90px;
+    left: 15px;
+    width: 12px;
+    height: 12px;
+   
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.dot-active{
+    background:  #A3FF18;
+}
+
+.dot-un-active{
+    background:   #223807; 
+}
+
+
+
+
+
+
+
+
+
+
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background: #000;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.time-container{
+    height: 250px;
+    width: 80vw;
+  background: #000;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.time-container>div{
+    margin: 10px;
+}
+
+.time-hour-1{}
+.time-hour-2{}
+.time-minute-1{}
+.time-minute-1{}
+.time-second-1{}
+.time-second-1{}

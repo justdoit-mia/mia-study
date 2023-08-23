@@ -1,0 +1,18 @@
+@import url('https://fonts.font.im/css?family=Modern+Antiqua');
+
+body{
+  background: radial-gradient(pink,#fff);
+  height: 100vh;
+  overflow: hidden;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#clock{
+  color: #4e2d8c;
+  font-size: 100px;
+  font-family: 'Share Tech Mono';
+  text-shadow: 0 0 20px pink, 0 2px 0 rgb(38, 132, 98);
+}
