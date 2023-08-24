@@ -273,7 +273,7 @@ function myFunction(){
 
  <!-- js 拥有动态类型 -->
 <p>typeof 操作符返回变量或表达式的类型</p>
-<p id="demo"></p>
+<p id="demo"></p>    
 <script>
   document.getElementById("demo").innerHTML = 
     typeof "john" + "<br>" + 
@@ -352,5 +352,299 @@ document.write(z + "<br>")
    document.getElementById("demo").innerHTML = person.fullName(); 
     </script>
 
+
+
+<!-- 函数 -->
+<button onclick="myFunction()">点我</button>
+调用函数
+<button onclick="myFunction('Harry Potter','Wizard')">点击这
+<script>
+function myFunction(name,job){
+  alert("Welcome " + name + ", the " + job);
+}
+</script>
+
+<!-- 带有返回值函数 -->
+<p id="demo"></p>
+<script>
+  function myFunction(a,b){
+    return a*b;
+  }
+  document.getElementById("demo").innerHTML=myFunction(4,3)
+</script>
+<!-- 局部作用域 -->
+<p id="demo"></p>
+<script>
+  myFunction();
+  document.getElementById("demo").innerHTML = "carName 的类型是：" +  typeof carNa
+  function myFunction()
+  {
+    var carName = "Volvo"
+  }
+</script>
+全局变量
+<p id="demo"></p>
+<script>
+var carName = "Volvo";
+  myFunction();
+  function myFunction() 
+  {
+      document.getElementById("demo").innerHTML =
+      "我可以显示 " + carName;
+  }
+  </script>
+中局变量
+  <p>
+    在 HTML 中, 所有全局变量都会成为 window 变量。
+  </p>
+  <p id="demo"></p>
+  <script>
+   document.getElementById("demo").innerHTML =
+  "我可以显示 " + window.carName;
+  function myFunction() 
+  {
+    carName = "Volvo"
+  }
+  </script> -->
+
+  字符串
+<p>中括号 [] 返回字符串中对应索引位置的字符：</p>
+<p id="demo"></p>
+<script>
+  const name = "RUNOOB";
+  let letter = name[2];
+  document.getElementById("demo").innerHTML = letter;
+</script>
+<p id="demo"></p>
+<script>
+  var x = 'It\'s alright';
+  var y = "He is called\"Johnny\"";
+  document.getElementById("demo").innerHTML = x + "<br>" + y;
+</script>
+<!-- 字符串长度 -->
+<script>
+  var txt = "Hello World!";
+  document.write("<p>" + txt.length + "</p>");
+  var txt="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.write("<p>" + txt.length + "</p>");
+</script>
+<!-- 字符串是对象 -->
+<p id="demo"></p>
+<script>
+var x = "John";              // x 是字符串
+var y = new String("John");  // y 是一个对象
+document.getElementById("demo").innerHTML = x===y;
+</script>
+<p>=== 为绝对相等，即数据类型与值都必须相等。</p>
+  <!-- 比较 -->
+年龄:<input id="age" value="18" />
+<p>是否达到投票年龄?</p>
+<button onclick="myFunction()">点击按钮</button>
+<p id="demo"></p>
+<script>
+function myFunction()
+{
+  var age,voteable;
+  age=document.getElementById("age").value;
+  voteable=(age<18)?"年龄太小":"年龄已达到";
+  document.getElementById("demo").innerHTML=voteable;
+}
+</script>
+<!-- 
+if语句 -->
+ <p>如果时间早于20:00,会获得问候"Good day"</p>
+ <button onclick="myFunction()">点击这里</button>
+ <p id="demo"></p>
+ <script>
+  function myFunction(){
+    var x="";
+    var time=new Date().getHours();
+    if (time<20) {
+      x="Good day"
+    } 
+    document.getElementById("demo").innerHTML=x;
+  }
+</script>
+
+<!-- if ...else语句 -->
+<p>点击这个按钮，获得基于时间的问候</p>
+<button onclick="myFunction()">点击这里</button>
+ <p id="demo"></p>
+ <script>
+  function myFunction(){
+    var x="";
+    var time=new Date().getHours();
+    if (time<20) {
+      x="Good day"
+    } 
+    else{
+      x="Good evening";
+    }
+    document.getElementById("demo").innerHTML=x;
+  }
+</script> 
+
+
+<!-- 语句 -->
+<p>点击下面显示星期几</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+<script>
+  function myFunction() {
+    var x ;
+    var d=new Date().getDay();
+    switch (d){
+      case 0:x="今天是星期日";
+      break;
+      case 1:x="今天是星期一";
+      break;
+      case 2:x="今天是星期二";
+      break;
+      case 3:x="今天是星期三";
+      break;
+      case 4:x="今天是星期四";
+      break;
+      case 5:x="今天是星期五";
+      break;
+      case 6:x="今天是星期六";
+      break;
+    }
+    document.getElementById("demo").innerHTML=x;
+  }
+</script>
+
+<!-- default关键词 -->
+<p>点击下面的按钮，会显示出基于今日日期的消息：</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+<script>
+  function  myFunction() 
+  {
+    var x;
+    var d=new Date().getDay;
+   switch (d) {
+    case 6:x="今天是星期六"
+    break;
+    case 0:x="今天是星期日"
+    break;
+    default:
+      x="期待周末";
+   }
+   document.getElementById("demo").innerHTML=x;
+  }
+</script>
+
+
+<!-- 使用for循环 -->
+<script>
+  cars=["BMW","Volvo","Saab","Ford"];
+  for (var i= 0;i< cars.length; i++) {
+    document.write(cars[i] + "<br>")
+  }
+</script>
+<!-- 
+循环语句 -->
+<script>
+  cars=["BMW","Volvo","Saab","Ford"];
+  var i =0,len=cars.length;
+  for (; i<len;){
+    document.write(cars[i] + "<br>");
+    i++
+  }
+</script>
+
+<!-- For/ln 循环语句 -->
+<p>x循环遍历对象“person"属性</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+<script>
+  function myFunction(){
+    var x;
+    var txt;
+    var person={fname:"Bill",lname:"Gates",age:56};
+    for (x in person) {
+      txt=txt + person[x];
+    }
+    document.getElementById("demo").innerHTML=txt;
+  }
+</script>
+
+<!-- break 语句 -->
+<p>点击按钮，测试带有 break 语句的循环。</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+<script>
+function myFunction(){
+  var x="",i=0;
+  for (i=0;i<10;i++){
+    if (i==3){
+          break;
+      }
+      x=x + "该数字为 " + i + "<br>";
+    }
+  document.getElementById("demo").innerHTML=x;
+}
+</script>
+
+<!-- continue 语句 -->
+<p>点击下面的按钮来执行循环，该循环会跳过 i=3 的数字。</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+<script>
+function myFunction(){
+  var x="",i=0;
+  for (i=0;i<10;i++){
+      if (i==3){
+        continue;
+      }
+    x=x + "该数字为 " + i + "<br>";
+    }
+  document.getElementById("demo").innerHTML=x;
+}
+</script>
+
+<!-- typeof 操作符 -->
+<p id="demo"></p>
+<script>
+  document.getElementById("demo").innerHTML=
+  typeof "john" + "<br>" + 
+  typeof 3.14 + "<br>" +
+  typeof false + "<br>" +
+  typeof [1,2,3,4] + "<br>" +
+  typeof {name:'john', age:34}
+</script>
+
+<!-- null  -->
+<p id="demo"></p>
+<script>
+  var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+  var person = null;
+  document.getElementById("demo").innerHTML = typeof person;
+</script>
+undefined
+<p>变量的值如果不存在则该变量值为 <b>undefined</b>。</p>
+<p id="demo"></p>
+<script>
+var person;
+document.getElementById("demo").innerHTML =
+  person + "<br>" + typeof person;
+</script>
+
+
+<!-- typeof操作符 -->
+<p id="demo"></p>
+<script>
+  document.getElementById("demo").innerHTML=
+  typeof "john" + "<br>" +
+  typeof 3.14 + "<br>" +
+    typeof NaN + "<br>" +
+    typeof false + "<br>" +
+    typeof [1,2,3,4] + "<br>" +
+    typeof {name:'john', age:34} + "<br>" +
+    typeof new Date() + "<br>" +
+    typeof function () {} + "<br>" +
+    typeof myCar + "<br>" +
+    typeof null;
+</script>
 </body>
 </html>
