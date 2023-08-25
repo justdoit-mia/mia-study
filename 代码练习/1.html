@@ -646,5 +646,115 @@ document.getElementById("demo").innerHTML =
     typeof myCar + "<br>" +
     typeof null;
 </script>
+
+
+<!-- null  -->
+<p id="demo"></p>
+<script>
+  var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+  var person = null;
+  document.getElementById("demo").innerHTML = typeof person;
+</script>
+<!-- undefined -->
+<p>变量的值如果不存在则该变量值为 <b>undefined</b>。</p>
+<p id="demo"></p>
+<script>
+var person;
+document.getElementById("demo").innerHTML =
+  person + "<br>" + typeof person;
+</script>
+
+<!-- typeof操作符 -->
+<p id="demo"></p>
+<script>
+  document.getElementById("demo").innerHTML=
+  typeof "john" + "<br>" +
+  typeof 3.14 + "<br>" +
+    typeof NaN + "<br>" +
+    typeof false + "<br>" +
+    typeof [1,2,3,4] + "<br>" +
+    typeof {name:'john', age:34} + "<br>" +
+    typeof new Date() + "<br>" +
+    typeof function () {} + "<br>" +
+    typeof myCar + "<br>" +
+    typeof null;
+</script>
+
+<!-- constuructor属性 -->
+<p id="demo"></p>
+<script>
+  document.getElementById("demo").innerHTML= 
+  "john".constructor + "<br>" +
+    (3.14).constructor + "<br>" +
+    false.constructor + "<br>" +
+    [1,2,3,4].constructor + "<br>" +
+    {name:'john', age:34}.constructor + "<br>" +
+    new Date().constructor + "<br>" +
+    function () {}.constructor;
+</script>
+
+将数字转换为字符串
+<p id="demo"></p>
+<script>
+  var x = 123;
+  document.getElementById("demo").innerHTML=
+  String(x) + "<br>" +
+  String(123) + "<br>" +
+  String(100+23)
+</script>
+
+一元运算符+
+<p> typeof 操作符返回变量或表达式的类型。</p>
+<button onclick="myFunction()">点我</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+    var y = "5";
+    var x = + y;
+    document.getElementById("demo").innerHTML =
+    typeof y + "<br>" + typeof x;
+}
+</script>
+
+
+search() 方法使用正则表达式
+<p>搜索字符串 "runoob", 并显示匹配的起始位置：</p>
+<button onclick="myFunction()">点我</button>
+<p id="demo"></p>
+<script>
+  function myFunction() {
+    var str = "Visit Runoob!";
+    var n = str.search(/Runoob/i);
+    document.getElementById("demo").innerHTML = n;
+  }
+</script>
+
+search() 方法使用字符串
+<p>搜索字符串 "Runoob", 并显示匹配的起始位置：</p>
+<button onclick="myFunction()">点我</button>
+<p id="demo"></p>
+<script>
+  function myFunction(){
+    var str = "Visit Runoob!"
+    var n = str.search("Runoob");
+    document.getElementById("demo").innerHTML = n
+  }
+</script>
+
+
+<!-- replace() 方法使用字符串 -->
+<p>替换 "Microsoft" 为 "Runoob" :</p>
+<button onclick="myFunction()">点我</button>
+<p id="demo">请访问 Microsoft!</p>
+<script>
+function myFunction() {
+    var str = document.getElementById("demo").innerHTML; 
+    var txt = str.replace("Microsoft","Runoob");
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+
+
 </body>
 </html>
