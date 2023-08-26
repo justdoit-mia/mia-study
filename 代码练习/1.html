@@ -655,6 +655,7 @@ document.getElementById("demo").innerHTML =
   var person = null;
   document.getElementById("demo").innerHTML = typeof person;
 </script>
+
 <!-- undefined -->
 <p>变量的值如果不存在则该变量值为 <b>undefined</b>。</p>
 <p id="demo"></p>
@@ -693,7 +694,7 @@ document.getElementById("demo").innerHTML =
     function () {}.constructor;
 </script>
 
-将数字转换为字符串
+<!-- 将数字转换为字符串 -->
 <p id="demo"></p>
 <script>
   var x = 123;
@@ -703,7 +704,7 @@ document.getElementById("demo").innerHTML =
   String(100+23)
 </script>
 
-一元运算符+
+<!-- 一元运算符+ -->
 <p> typeof 操作符返回变量或表达式的类型。</p>
 <button onclick="myFunction()">点我</button>
 <p id="demo"></p>
@@ -717,7 +718,7 @@ function myFunction() {
 </script>
 
 
-search() 方法使用正则表达式
+<!-- search() 方法使用正则表达式 -->
 <p>搜索字符串 "runoob", 并显示匹配的起始位置：</p>
 <button onclick="myFunction()">点我</button>
 <p id="demo"></p>
@@ -729,7 +730,7 @@ search() 方法使用正则表达式
   }
 </script>
 
-search() 方法使用字符串
+<!-- search() 方法使用字符串 -->
 <p>搜索字符串 "Runoob", 并显示匹配的起始位置：</p>
 <button onclick="myFunction()">点我</button>
 <p id="demo"></p>
@@ -750,11 +751,72 @@ search() 方法使用字符串
 function myFunction() {
     var str = document.getElementById("demo").innerHTML; 
     var txt = str.replace("Microsoft","Runoob");
-    document.getElementById("demo").innerHTML = txt;
-}
+    document.getElementById("demo").innerHTML = txt;}
+  </script>
+
+<!-- 
+null 
+声明提升 -->
+<p id="demo"></p>
+<script>
+x = 5; // 变量 x 设置为 5
+elem = document.getElementById("demo"); // 查找元素 
+elem.innerHTML = x;                     // 在元素中显示 x
+var x; // 声明 x
+</script>
+<p id="demo"></p>
+<script>
+var x; // 声明 x
+x = 5; // 变量 x 设置为 5
+elem = document.getElementById("demo"); // 查找元素 
+elem.innerHTML = x; 
+</script>
+<!-- 初始化不会提升 -->
+<p id="demo"></p>
+<script>
+var x = 5; // 初始化 x
+var y = 7; // 初始化 y
+elem = document.getElementById("demo"); // 查找元素 
+elem.innerHTML = x + " " + y;           // 显示 x 和 y
+</script>
+<p id="demo"></p>
+<script>
+var x = 5; // 初始化 x
+elem = document.getElementById("demo"); // 查找元素 
+elem.innerHTML = "x 为：" + x + "，y 为：" + y;           // 显示 x 和 y
+var y = 7; // 初始化 y
 </script>
 
-
-
-</body>
+<!-- 表单验证 -->
+<form name="myForm" action="demo_form.php"onsubmit="return validateForm()"method="post">
+  名字:<input type="text" name="fname">
+  <input type="submit" value="提交">
+  <!-- 表单自动验证 -->
+</form>
+<form action="demo_form.php" method="post">
+<input type="text" name="fname" required="required">
+<input type="submit" value="提交">
+</form>
+<!-- 必填选项1 -->
+<form name="myForm" action="demo-form.php" onsubmit="return validateForm()" method="post">
+  姓: <input type="text" name="fname">
+  <input type="submit" value="提交">
+  </form>
+  <!-- checkValidity() 方法 -->
+  <p>输入数字并点击验证按钮:</p>
+<input id="id1" type="number" min="100" max="300" required>
+<button onclick="myFunction()">验证</button>
+<p>如果输入的数字小于 100 或大于300，会提示错误信息。</p>
+<p id="demo"></p>
+<script>
+function myFunction() {
+    var inpObj = document.getElementById("id1");
+    if (inpObj.checkValidity() == false) {
+        document.getElementById("demo").innerHTML = inpObj.validationMessage;
+    } else {
+        document.getElementById("demo").innerHTML = "输入正确";
+    }
+}
+</script>
+ </body>
 </html>
