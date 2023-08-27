@@ -803,7 +803,7 @@ var y = 7; // 初始化 y
   <input type="submit" value="提交">
   </form>
   <!-- checkValidity() 方法 -->
-  <p>输入数字并点击验证按钮:</p>
+  <p>输入数字并点击验证按钮:</p>0
 <input id="id1" type="number" min="100" max="300" required>
 <button onclick="myFunction()">验证</button>
 <p>如果输入的数字小于 100 或大于300，会提示错误信息。</p>
@@ -818,5 +818,117 @@ function myFunction() {
     }
 }
 </script>
+
+<!-- JavaScript this 关键字  -->
+<h2>JavaScript <b>this</b> 关键字</h2>
+<p>实例中，<b>this</b> 指向了 <b>person</b> 对象。</p>
+<p>因为 person 对象是 fullName 方法的所有者。</p>
+<p id="demo"></p>
+<script>
+// 创建一个对象
+var person = {
+  firstName: "John",
+  lastName : "Doe",
+  id     : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+   }
+  };
+// 显示对象的数据
+document.getElementById("demo").innerHTML = person.fullName();
+</script>
+
+<!-- 全局变量 -->
+<p>全局变量在任何脚本和函数内均可访问。</p>
+<p id="demo"></p>
+<script>
+var carName = "Volvo";
+myFunction();
+function myFunction() 
+{
+    document.getElementById("demo").innerHTML =
+    "我可以显示 " + carName;
+}
+</script>
+
+<!-- 局部变量 -->
+<p>局部变量在声明的函数外不可以访问。</p>
+<p id="demo"></p>
+<script>
+myFunction();
+document.getElementById("demo").innerHTML = "carName 的类型是：" +  typeof carName;
+function myFunction() 
+{
+    var carName = "Volvo";
+}
+</script>
+
+<!-- 重新定义变量 -->
+<h2>使用 var 声明变量</h2>
+<p id="demo"></p>
+<script>
+var  x = 10;
+// 这里输出 x 为 10
+{  
+    var x = 2;
+    // 这里输出 x 为 2
+}
+// 这里输出 x 为 2
+document.getElementById("demo").innerHTML = x;
+</script>
+
+<!-- 循环作用域 -->
+<h2>JavaScript let</h2>
+<p id="demo"></p>
+<script>
+var i = 5;
+for (var i = 0; i < 10; i++) {
+    // 一些代码...
+}
+document.getElementById("demo").innerHTML = i;
+</script>
+
+<!-- JSON 字符串转换为 JavaScript 对象 -->
+<h2>为 JSON 字符串创建对象</h2>
+<p id="demo"></p>
+<script>
+var text = '{ "sites" : [' +
+  '{ "name":"Runoob" , "url":"www.runoob.com" },' +
+  '{ "name":"Google" , "url":"www.google.com" },' +
+  '{ "name":"Taobao" , "url":"www.taobao.com" } ]}';
+obj = JSON.parse(text);
+document.getElementById("demo").innerHTML = obj.sites[1].name + " " + obj.sites[1].url;
+</script>
+
+<!-- javascript:void(0) 含义 -->
+<a href="javascript:void(0)">单击此处什么也不会发生</a>
+
+<p>点击以下链接查看结果：</p>
+<a href="javascript:void(alert('Warning!!!'))">点我!</a>
+
+<!-- 函数声明 -->
+<p id="demo"></p>
+<script>
+function myFunction(a,b){
+  return a*b;
+}
+document.getElementById("demo").innerHTML=myFunction(4,3);
+</script>
+
+
+<!-- 函数表达式 -->
+<p id="demo"></p>
+<script>
+var x = function (a, b) {return a * b};
+document.getElementById("demo").innerHTML = x;
+</script>
+
+<p id="demo"></p>
+<script>
+var x = function (a, b) {return a * b};
+document.getElementById("demo").innerHTML = x(4, 3);
+</script>
+
+ 
  </body>
 </html>
