@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  ES6 函数可以自带参数
+  <p id="demo1"></p>
+  <p id="demo2"></p>
+  <script>
+  function myFunction(x, y = 10) {
+      // 如果不传入参数 y ，则其默认值为 10
+      return x + y;
+  }
+  // 输出 2
+  document.getElementById("demo1").innerHTML = myFunction(0, 2) ;
+  // 输出 15, y 参数的默认值
+  document.getElementById("demo2").innerHTML = myFunction(5);
+  // arguments 对象
+  <p id="demo"></p>
+  x = findMax(1, 123, 500, 115, 44, 88);
+  function findMax() {
+      var i, max = arguments[0];
+      if(arguments.length < 2) return max;
+      for (i = 0; i < arguments.length; i++) {
+          if (arguments[i] > max) {
+              max = arguments[i];
+          }
+      }
+      return max;
+  }
+  document.getElementById("demo").innerHTML = x;
+  
+  // 作为一个函数调用
+  <p id="demo"></p>
+  function myFunction(a, b) {
+    return a * b;
+  }
+  document.getElementById("demo").innerHTML = window.myFunction(10, 2); 
+  
+  // 全局对象
+  <p id="demo"></p>
+  function myFunction() {
+    return this;
+  }
+  document.getElementById("demo").innerHTML = myFunction(); 
+  
+  //  函数作为方法调用
+  <p id="demo"></p>
+  var myObject = {
+      firstName:"John",
+      lastName: "Doe",
+      fullName: function() {
+      return this.firstName + " " + this.lastName;
+      }
+  }
+  document.getElementById("demo").innerHTML = myObject.fullName(); 
+  
+  //  使用构造函数调用函数
+  <p id="demo"></p>
+  function myFunction(arg1, arg2) {
+    this.firstName = arg1;
+      this.lastName  = arg2;
+  }
+  var x = new myFunction("John","Doe")
+  document.getElementById("demo").innerHTML = x.firstName; 
+  
+//  作为函数方法调用函数
+  <p id="demo"></p>
+  var myObject, myArray;
+  function myFunction(a, b) {
+      return a * b;
+  }
+  myArray = [10, 2]
+  myObject = myFunction.apply(myObject, myArray);     
+  document.getElementById("demo").innerHTML = myObject; 
+
+  //  全局变量
+  <p id="demo"></p>
+  var a = 4;
+  function myFunction() {
+    document.getElementById("demo").innerHTML = a * a;
+  } 
+// js 内嵌函数
+<p id="demo">0</p>
+  document.getElementById("demo").innerHTML = add();
+  function add () {
+    var counter = 0
+    function plus() {counter += 1;}
+     plus() ;
+    return counter;
+}
+</script>
+
+</body>
+</html>
