@@ -94,5 +94,80 @@
 }
 </script>
 
+
+<!-- js 闭包 -->
+<button type="button" onclick="myFunction()">计数</button>
+<p id="demo">0</p>
+<script>
+var add = (function () {
+    var counter = 0;
+    return function () {return counter += 1;}
+}) ();
+function myFunction(){
+    document.getElementById("demo").innerHTML = add();
+}
+</script>
+
+ <!-- 函数可以作为一个值使用 -->
+<p>x = myFunction(4,3)或x = 12</p>
+<p id="demo"></p>
+<script>
+  function myFunction(a, b) {
+return a * b;    
+  }
+  var x = myFunction(4, 3);
+  document.getElementById("demo").innerHTML = x;
+</script>
+
+<!-- 函数可作为一个表达式说明 -->
+<p id="demo"></p>
+<script>
+  function myFunction(a, b) {
+    return a * b ;s
+    
+  }
+  var x = myFunction(4,3) * 2;
+  document.getElementById("demo").innerHTML = x;
+</script>
+
+<!-- 通过id查找HTML元素 -->
+<p id="intro"></p>
+<script>
+  x=document.getElementById("intro")
+  document.write("<p>文本来自id为iotro段落:" + x.innerHTML + "</p>")
+  document.write(Date())
+</script> 
+
+<p id="p1">Hello World</p>
+<p id="p2">Hello World</p>
+<script>
+  document.getElementById("p2").style.color="blue"
+  document.getElementById("p2").style.color="ARIAL"
+  document.getElementById("p2").style.color="larger"
+</script> 
+
+ <!-- collection对象length属性 -->
+ <h2>JavaScript HTML DOM</h2>
+ <p>Hello World</p>
+ <p>Hello Runoob!</p>
+ <p id="demo"></p>
+ <script>
+var myCollection = document.getElementsByClassName("p");
+document.getElementById("demo").innerHTML = "文档包含" + myCollection.length + "个段落。";
+ </script>
+
+ <p>Hello World!</p>
+ <p>Hello runoob!</p>
+ <p>点击按钮修改p元素的背景颜色</p>
+<button onclick="myFunction()">点我！</button>
+<script>
+  function myFunction() {
+    var myCollection = document.getElementsByTagName("p");
+    var i ;
+    for (i = 0; i <myCollection.length; i++) {
+      myCollection[i].style.color = "red"
+    }
+  }
+</script>
 </body>
 </html>
