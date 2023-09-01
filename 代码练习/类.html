@@ -164,5 +164,120 @@ eval ("var x = 2");
 alert (x);               // 报错
 </script>
 
+
+
+<!-- "super" 方法用于调用父类的构造函数 -->
+<p id="demo"></p>
+<script>
+class Site {
+  constructor(name) {
+    this.sitename = name;
+  }
+  present() {
+    return '我喜欢' + this.sitename;
+  }
+}
+ 
+class Runoob extends Site {
+  constructor(name, age) {
+    super(name);
+    this.age = age;
+  }
+  show() {
+    return this.present() + ', 它创建了 ' + this.age + ' 年。';
+  }
+}
+ 
+let noob = new Runoob("菜鸟教程", 5);
+document.getElementById("demo").innerHTML = noob.show();
+</script>
+
+
+ <!-- getter 和 setter 使用的是 get 和 set 关键字 -->
+<p id="demo"></p>
+
+<script>
+class Runoob {
+  constructor(name) {
+    this.sitename = name;
+  }
+  get s_name() {
+    return this.sitename;
+  }
+  set s_name(x) {
+    this.sitename = x;
+  }
+}
+ 
+let noob = new Runoob("菜鸟教程");
+ 
+document.getElementById("demo").innerHTML = noob.s_name;
+</script>
+
+
+
+<!-- 使用下划线字符 _ 将 getter/setter 与实际属性分开 -->
+<p id="demo"></p>
+
+<script>
+class Runoob {
+  constructor(name) {
+    this._sitename = name;
+  }
+  get sitename() {
+    return this._sitename;
+  }
+  set sitename(x) {
+    this._sitename = x;
+  }
+}
+ 
+let noob = new Runoob("菜鸟教程");
+ 
+document.getElementById("demo").innerHTML = noob.sitename;
+
+</script>
+
+
+<!-- 静态方法不能在对象上调用 -->
+<p id="demo"></p>
+
+<script>
+class Runoob {
+  constructor(name) {
+    this.name = name;
+  }
+  static hello() {
+    return "Hello!!";
+  }
+}
+ 
+let noob = new Runoob("菜鸟教程");
+ 
+// 可以在类中调用 'hello()' 方法
+document.getElementById("demo").innerHTML = Runoob.hello();
+ 
+// 不能通过实例化后的对象调用静态方法
+// document.getElementById("demo").innerHTML = noob.hello();
+// 以上代码会报错
+</script>
+
+
+<!-- "noob" 对象可以作为参数传递给静态方法 -->
+<p id="demo"></p>
+
+<script>
+class Runoob {
+  constructor(name) {
+    this.name = name;
+  }
+  static hello(x) {
+    return "Hello " + x.name;
+  }
+}
+let noob = new Runoob("菜鸟教程");
+document.getElementById("demo").innerHTML = Runoob.hello(noob);
+</script>
+
 </body>
 </html>
