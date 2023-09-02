@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ <!-- <b>getElementById</b> -->
+<script>
+x=document.getElementById("intro");
+document.write("<p>文本来自 id 为 intro 段落: " + x.innerHTML + "</p>");
+</script>
+
+ <!-- <b>getElementsByTagName</b> -->
+</div>
+<script>
+var x=document.getElementById("main");
+var y=x.getElementsByTagName("p");
+document.write('id="main"元素中的第一个段落为：' + y[0].innerHTML);
+</script>
+
+
+ <!-- <b>getElementsByClassName</b> -->
+<script>
+x=document.getElementsByClassName("intro");
+document.write("<p>文本来自 class 为 intro 段落: " + x[0].innerHTML + "</p>");
+</script>
+
+
+</body>
+</html>

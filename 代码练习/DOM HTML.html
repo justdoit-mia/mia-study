@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<!-- 改变 HTML 输出流 -->
+<script>
+  document.write(Date());
+</script>
+
+<!-- 改变HTML内容 -->
+<script>
+document.getElementById("p1").innerHTML="新文本!";
+</script>
+<!-- 以上段落通过脚本修改文本 -->
+
+<h1 id="header">旧标题</h1>
+<script>
+var element=document.getElementById("header");
+element.innerHTML="新标题";
+</script>
+<!-- "旧标题" 被 "新标题" 取代 -->
+
+
+<img id="image" src="../tp/landscape.jpg" width="160" height="120">
+<script>
+document.getElementById("tp").src="landscape.jpg";
+</script>
+</body>
+</html>
