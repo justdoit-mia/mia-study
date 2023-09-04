@@ -85,8 +85,8 @@ window.addEventListener("resize", function(){
 <button id="myBtn">点我</button>
 <p id="demo"></p>
 <script>
-var p1 = 5;
-var p2 = 7;
+  var p1 = 5;
+  var p2 = 7;
 document.getElementById("myBtn").addEventListener("click", function() {
     myFunction(p1, p2);
 });
@@ -111,5 +111,126 @@ function removeHandler() {
     document.getElementById("myDIV").removeEventListener("mousemove", myFunction);
 }
 </script>
+
+
+<!-- 创建新的 HTML 元素节点
+appendChild -->
+<div id="div1">
+<p id="p1">这是一个段落。</p>
+<p id="p2">这是另外一个段落。</p>
+</div>
+     
+<script>
+    var para = document.createElement("p");
+    var node = document.createTextNode("这是一个新的段落。");
+    para.appendChild(node);
+     
+    var element = document.getElementById("div1");
+    element.appendChild(para);
+</script>
+
+<!-- 创建新的 HTML 元素节点
+insertBefore -->
+<div id="div1">
+<p id="p1">这是一个段落。</p>
+<p id="p2">这是另外一个段落。</p>
+</div>
+     
+    <script>
+    var para = document.createElement("p");
+    var node = document.createTextNode("这是一个新的段落。");
+    para.appendChild(node);
+     
+    var element = document.getElementById("div1");
+    var child = document.getElementById("p1");
+    element.insertBefore(para, child);
+    </script>
+
+
+<!-- 移除已存在的元素 -->
+<div id="div1">
+    <p id="p1">这是一个段落。</p>
+    <p id="p2">这是另外一个段落。</p>
+    </div>
+     
+<script>
+    var parent = document.getElementById("div1");
+    var child = document.getElementById("p1");
+    parent.removeChild(child);
+</script>
+    <!-- 替换
+    replaceChild -->
+<div id="div1">
+  <p id="p1">这是一个段落。</p>
+  <p id="p2">这是另外一个段落。</p>
+</div>
+         
+<script>
+  var para = document.createElement("p");
+  var node = document.createTextNode("这是一个新的段落。");
+  para.appendChild(node);
+         
+  var parent = document.getElementById("div1");
+  var child = document.getElementById("p1");
+  parent.replaceChild(para, child);
+</script>
+
+<!-- HTMLCollection -->
+<p>Hello World!</p>
+<p>Hello Runoob!</p>
+<p id="demo"></p>
+
+<script>
+  var myCollection = document.getElementsByTagName("p");
+  document.getElementById("demo").innerHTML = "第二个段落的内容为:<span style='color:red;'> " + myCollection[1].innerHTML + '</span>';
+</script>
+
+<!-- Collection  length 属性 -->
+<p>Hello World!</p>
+<p>Hello Runoob!</p>
+<p id="demo"></p>
+
+<script>
+  var myCollection = document.getElementsByTagName("p");
+  document.getElementById("demo").innerHTML = "文档包含" + myCollection.length + " 个段落。";
+</script>
+
+
+<!-- 集合 length 属性
+修改所有 <p> 元素的背景颜色 -->
+<p>Hello World!</p>
+<p>Hello Runoob!</p>
+<p>点击按钮修改 p 元素的背景颜色。</p>
+<button onclick="myFunction()">点我</button>
+
+<script>
+function myFunction() {
+  var myCollection = document.getElementsByTagName("p");
+  var i;
+    for (i = 0; i < myCollection.length; i++) {
+        myCollection[i].style.color = "pink";
+    }
+}
+</script>
+
+<!-- NodeList  访问第二个 <p> 元素 -->
+<p>Hello World!</p>
+<p>Hello Runoob!</p>
+<p id="demo"></p>
+<script>
+  var myNodelist = document.querySelectorAll("p");
+  document.getElementById("demo").innerHTML = "第二个段落的内容为:<span style='color:red;'> " + myNodelist[1].innerHTML + '</span>';
+</script>
+    
+<!-- length 属性 -->
+<p>Hello World!</p>
+<p>Hello Runoob!</p>
+<p id="demo"></p>
+<script>
+var myNodelist = document.querySelectorAll("p");
+document.getElementById("demo").innerHTML = "文档包含 " + myNodelist.length + " 个段落。";
+</script>
+
+
 </body>
 </html>
