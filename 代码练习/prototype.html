@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ 使用对象构造器
+
+
+ <script>
+ function Person(first, last, age, eye) {
+   this.firstName = first;
+   this.lastName = last;
+   this.age = age;
+   this.eyeColor = eye;
+ }
+ 
+ var myFather = new Person("John", "Doe", 50, "blue");
+ var myMother = new Person("Sally", "Rally", 48, "green");
+ 
+ document.getElementById("demo").innerHTML =
+ "我的父亲年龄是 " + myFather.age + "。我的母亲年龄是 " + myMother.age; 
+ </script>  
+</body>
+</html>
