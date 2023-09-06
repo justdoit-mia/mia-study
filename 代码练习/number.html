@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+精度
+  <button onclick="myFunction()">点我</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+    var x = 999999999999999;
+    var y = 9999999999999999;
+    document.getElementById("demo").innerHTML = x + "<br>" + y;
+}
+</script>
+
+<script>
+  var x;
+  document.write("<p>显示17位: ");
+  x=12345678901234567890;
+  document.write(x + "</p>");
+  document.write("<p>0.2 + 0.1 = ");
+  x=0.2+0.1;
+  document.write(x + "</p>");
+  document.write("<p>乘以10或除以10来计算: ");
+  x=(0.2*10+0.1*10)/10;
+  document.write(x +"</p>");
+  </script>
+</body>
+</html>
