@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="p1">11111Click the button to locate where "locate" first occurs.</p>
+  <p id="p2">0</p>
+  <button onclick="myFunction()">点我</button>
+  <p>替换 "Microsoft" 为 "Runoob" :</p>
+  <button onclick="myFunction1()">点我</button>
+  <div>demo1: <p id="demo1">请访问 Microsoft!</p> </div>
+  <div>demo2: <p id="demo2">单击按钮显示数组。</p></div>
+
+  <button onclick="myFunction2()">点我</button>
+
+<!-- string对象 -->
+  <script>
+    var carname1="Volvo XC60";
+    var carname2='Volvo XC60';
+    var answer1='It\'s alright';
+    var answer2="He is called \"Johnny\"";
+    var answer3='He is called "Johnny"';
+    document.write(carname1 + "<br>")
+    document.write(carname2 + "<br>")
+    document.write(answer1 + "<br>")
+    document.write(answer2 + "<br>")
+    document.write(answer3 + "<br>")
+   
+// <!-- 字符串string -->
+  var txt = "Hello World!";
+  document.write("<p>" + txt.length + "</p>");
+  var txt="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  document.write("<p>" + txt.length + "</p>");
+
+
+// <!-- 字符串查找字符串 -->
+function myFunction(){
+	var str=document.getElementById("p1").innerHTML;
+	var n=str.indexOf("locate");
+	document.getElementById("p2").innerHTML=n+1;
+}
+
+// <!-- 内容匹配 -->
+  var str="Hello world!";
+  document.write(str.match("world") + "<br>");
+  document.write(str.match("World") + "<br>");
+  document.write(str.match("world!"));
+
+// <!-- 替换内容 -->
+function myFunction1() {
+    var str = document.getElementById("demo1").innerHTML; 
+    var txt = str.replace("Microsoft","Runoob");
+    document.getElementById("demo1").innerHTML = txt;
+}
+
+// <!-- 字符串大小写转换 -->
+  var txt="Hello World!";
+  document.write("<p>" + txt.toUpperCase() + "</p>");
+  document.write("<p>" + txt.toLowerCase() + "</p>");
+  document.write("<p>" + txt + "</p>");
+
+// <!-- 方法返回一个新的字符串，源字符串没有被改变 -->
+// <!-- 字符串转为数组 -->
+function myFunction2(){
+	var str="a,b,c,d,e,f";
+	var n=str.split(",");
+	document.getElementById("demo2").innerHTML=n[0];
+}
+
+var zre=3 
+var zre=4
+var fn_1=()=>{
+console.log(zre)
+}
+var fn_2=()=>{
+	var str="a,b,c,d,e,f";
+	var n=str.split(",");
+	document.getElementById("demo2").innerHTML=n[0];
+  console.log("a,b")
+}
+
+fn_2()
+</script>
+
+  
+</body>
+</html>

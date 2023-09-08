@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="a1">单击按钮创建一个数组,调用 ucase（）方法, 并显示结果。</p>
+  <button onclick="my1()">点我</button>
+  <p id="a2">点击按钮将数组作为字符串输出。</p>
+  <button onclick="my2()">点我</button>
+  <p id="a3">单击按钮删除数组的最后一个元素。</p>
+ <button onclick="my3()">点我</button>
+ <p id="a4">单击按钮给数组添加新的元素。</p>
+ <button onclick="my4()">点我</button>
+ <p id="a5">单击按钮将数组反转排序。</p>
+ <button onclick="my5()">点我</button>
+ <p id="a6">单击按钮删除数组的第一个元素。</p>
+ <p id="a7"></p>
+ <button onclick="my6()">点我</button>
+ <p id="a8">点击按钮截取数组下标 1 到 2 的元素。</p>
+ <button onclick="my8()">点我</button>
+ <p id="a9">单击按钮升序排列数组。</p>
+ <button onclick="my9()">点我</button>
+ <p id="a10">单击按钮升序排列数组。</p>
+ <button onclick="my10()">点我</button>
+ <p id="a11">单击按钮降序排列数组。</p>
+ <button onclick="my11()">点我</button>
+ <p id="a12">点击按钮向数组添加元素。</p>
+ <button onclick="my12()">点我</button>
+ <p id="a13">点击按钮将数组转为字符串并返回。</p>
+ <button onclick="my13()">点我</button>
+ <p id="a14">单击按钮在数组中插入元素。</p>
+ <button onclick="my14()">点我</button>
+ 
+  <!-- 赋值 -->
+  <script>
+    var i;
+    var mycars = new Array();
+    mycars[0] = "Saab";
+    mycars[1] = "Volvo";
+    mycars[2] = "BMW";
+    for (i=0;i<mycars.length;i++){
+      document.write(mycars[i] + "<br />");
+    }
+  
+// 创建新方法
+Array.prototype.myUcase=function(){
+	for (i=0;i<this.length;i++){
+		this[i]=this[i].toUpperCase();
+	}
+}
+function my1(){
+	var fruits = ["Banana", "Orange", "Apple", "Mango"];
+	fruits.myUcase();
+	var x=document.getElementById("a1");
+	x.innerHTML=fruits;
+}
+
+// 合并两个数组
+  var a = ["Google", "Taobao"];
+  var b = ["Runoob", "Wiki", "Zhihu"];
+  var c = a.concat(b);
+  document.write(c);
+
+// 合并三个数组
+  var parents = ["Jani", "Tove"];
+  var brothers = ["Stale", "Kai Jim", "Borge"];
+  var children = ["Cecilie", "Lone"];
+  var family = parents.concat(brothers, children);
+  document.write(family);
+
+// 数组元素组成字符串
+function my2(){
+	var fruits = ["Banana", "Orange", "Apple", "Mango"];
+	var x=document.getElementById("a2");
+	x.innerHTML=fruits.join();
+}
+
+// 删除数组最后一个元素
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+function my3(){
+	fruits.pop();
+	var x=document.getElementById("a3");
+	x.innerHTML=
+  fruits;
+}
+
+// 数组末尾添加新元素
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+function my4(){
+	fruits.push("Kiwi")
+	var x=document.getElementById("a4");
+	x.innerHTML=fruits;
+}
+
+// 数组反转排序
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+function my5(){
+	fruits.reverse();
+	var x=document.getElementById("a5");
+	x.innerHTML=fruits;
+}
+
+// 删除数组第一个元素
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+function my6(){
+	var delell = fruits.shift();
+	var x=document.getElementById("a6");
+	x.innerHTML= '删除后数组为：' +  fruits;
+	document.getElementById("a7").innerHTML= '删除的元素是：' +  delell;
+}
+
+// 从一个数组中选择元素
+function my8(){
+	var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+	var citrus = fruits.slice(1,3);
+	var x=document.getElementById("a8");
+	x.innerHTML=citrus;
+}
+
+// 数组 字母升序
+function my9(){
+	var fruits = ["Banana", "Orange", "Apple", "Mango"];
+	fruits.sort();
+	var x=document.getElementById("a9");
+	x.innerHTML=fruits;
+}
+
+// 数字 数字升序
+function my10(){
+	var points = [40,100,1,5,25,10];
+	points.sort(function(a,b){return a-b});
+	var x=document.getElementById("a10");
+	x.innerHTML=points;
+}
+
+// 数字 降序
+function my11(){
+	var points = [40,100,1,5,25,10];
+	points.sort(function(a,b){return b-a});
+	var x=document.getElementById("a11");
+	x.innerHTML=points;
+}
+
+// 数组第二个位置添加元素
+function my12(){
+	var fruits = ["Banana", "Orange", "Apple", "Mango"];
+	fruits.splice(2,0,"Lemon","Kiwi");
+	var x=document.getElementById("a12");
+	x.innerHTML=fruits;
+}
+
+// 转到数组到字符串
+function my13(){
+	var fruits = ["Banana", "Orange", "Apple", "Mango"];
+	var str = fruits.toString();
+	var x=document.getElementById("a13");
+	x.innerHTML= str;
+}
+
+// 数组开头添加元素
+function my14(){
+	var fruits = ["Banana", "Orange", "Apple", "Mango"];
+	fruits.unshift("Lemon","Pineapple");
+	var x=document.getElementById("a14");
+	x.innerHTML=fruits;
+}
+</script>
+
+</body>
+</html>

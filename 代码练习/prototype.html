@@ -6,9 +6,8 @@
   <title>Document</title>
 </head>
 <body>
- 使用对象构造器
-
-
+ <!-- 使用对象构造器 -->
+ <p id="demo"></p>
  <script>
  function Person(first, last, age, eye) {
    this.firstName = first;
@@ -19,9 +18,77 @@
  
  var myFather = new Person("John", "Doe", 50, "blue");
  var myMother = new Person("Sally", "Rally", 48, "green");
- 
  document.getElementById("demo").innerHTML =
  "我的父亲年龄是 " + myFather.age + "。我的母亲年龄是 " + myMother.age; 
- </script>  
+ </script>
+ 
+<!-- 不能给构造函数添加新属性  -->
+ <p id="demo"></p>
+ <script>
+ function Person(first, last, age, eye) {
+   this.firstName = first;
+   this.lastName = last;
+   this.age = age;
+   this.eyeColor = eye;
+ }
+ 
+ Person.nationality = "English";
+ var myFather = new Person("John", "Doe", 50, "blue");
+ var myMother = new Person("Sally", "Rally", 48, "green");
+ document.getElementById("demo").innerHTML =
+ "我父亲的国籍是 " + myFather.nationality; 
+ </script> 
+
+<!-- 新属性添加在函数构造器中 -->
+<p id="demo"></p>
+<script>
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+  this.nationality = "English";
+}
+
+var myFather = new Person("John", "Doe", 50, "blue");
+var myMother = new Person("Sally", "Rally", 48, "green");
+document.getElementById("demo").innerHTML =
+"我父亲的国籍是 " + myFather.nationality + "。我母亲的国籍是 " + myMother.nationality;
+</script>
+
+<!-- 添加属性和方法 -->
+<script>
+  function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+  }
+  
+  Person.prototype.nationality = "English";
+  var myFather = new Person("John", "Doe", 50, "blue");
+  document.getElementById("demo").innerHTML =
+  "我父亲的国籍是 " + myFather.nationality; 
+  </script>
+
+
+<!-- 使用 prototype 属性给对象的构造函数添加 -->
+<p id="demo"></p>
+<script>
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+
+Person.prototype.name = function() {
+  return this.firstName + " " + this.lastName
+};
+
+var myFather = new Person("John", "Doe", 50, "blue");
+document.getElementById("demo").innerHTML =
+"我的父亲是 " + myFather.name(); 
+</script>  
 </body>
 </html>

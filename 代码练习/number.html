@@ -6,7 +6,7 @@
   <title>Document</title>
 </head>
 <body>
-精度
+<!-- 精度 -->
   <button onclick="myFunction()">点我</button>
 <p id="demo"></p>
 <script>
@@ -29,5 +29,67 @@ function myFunction() {
   x=(0.2*10+0.1*10)/10;
   document.write(x +"</p>");
   </script>
+
+  <!-- 八进制和十六进制 -->
+  <script>
+    var y = 0377;
+    var z = 0xFF; 
+    document.write(y + "<br>");
+    document.write(z + "<br>");
+    </script>
+<script>
+  var myNumber = 128;
+  document.write(myNumber + ' 十进制<br>');
+  document.write(myNumber.toString(16) + ' 十六进制<br>');
+  document.write(myNumber.toString(8) + ' 八进制<br>');
+  document.write(myNumber.toString(2) + ' 二进制<br>');
+  </script>
+
+
+<!-- 无穷大 -->
+<script>
+  myNumber=2;
+  while (myNumber!=Infinity){
+    myNumber=myNumber*myNumber;
+    document.write(myNumber +'<BR>');
+  }
+  </script>
+
+<script>
+  var x = 2/0;
+  var y = -2/0;
+  document.write(x + "<br>");
+  document.write(y + "<br>");
+  </script>
+
+<!-- 非数字值 -->
+<p>一个数字除以一个字符串结果不是一个数字</p>
+<p>一个数字除以一个字符串数字结果是一个数字</p>
+<p id="demo"></p>
+<script>
+var x = 1000 / "Apple";
+var y = 1000 / "1000";
+document.getElementById("demo").innerHTML = isNaN(x) + "<br>" + isNaN(y);
+</script>
+
+<p id="demo"></p>
+<script>
+var y = 1000 / 0;
+document.getElementById("demo").innerHTML = isNaN(y);
+</script>
+
+<!-- 数字可以是数字或者对象 -->
+<script>
+  var x = 123;              // x 是一个数字
+  var y = new Number(123);  // y 是一个对象
+  var txt = typeof(x) + " " + typeof(y);
+  document.getElementById("demo").innerHTML=txt;
+  </script>
+
+<script>
+  var x = 123;              // x 是一个数字
+  var y = new Number(123);  // y 是一个对象
+  document.getElementById("demo").innerHTML = x===y;
+  </script>  
 </body>
 </html>

@@ -6,12 +6,14 @@
   <title>Document</title>
 </head>
 <body>
-  当日日期
+  <!-- 当日日期 -->
   <script>
     var d=new Date();
     document.write(d);
     </script>
-  年份
+
+
+  <!-- 年份 -->
   <p id="demo"></p>
 <button onclick="myFunction()">点我</button>
   <script>
@@ -20,8 +22,10 @@
       var x = document.getElementById("demo");
       x.innerHTML=d.getFullYear();
     }
-    </script>   
-  毫秒数
+    </script> 
+    
+    
+  <!-- 毫秒数 -->
   <p id="demo"></p>
 <button onclick="myFunction()">点我</button>
 <script>
@@ -32,5 +36,72 @@ function myFunction(){
 }
 </script>
 
+
+  <!-- 设置具体日期  0至11 10是11月 -->
+<button onclick="myFunction()">点我</button>
+<script>
+function myFunction(){
+	var d = new Date();
+	d.setFullYear(2020,10,3);
+	var x = document.getElementById("demo");
+	x.innerHTML=d;
+}
+</script>
+
+
+<!-- 把 utc 日期和时间转换成字符串 -->
+<p id="demo"></p>
+<button onclick="myFunction()">点我</button>
+<script>
+function myFunction(){
+	var d = new Date();
+	var x = document.getElementById("demo");
+	x.innerHTML=d.toUTCString();
+}
+</script>
+
+
+<!-- 显示今天周几 -->
+<p id="demo"></p>
+<button onclick="myFunction()">点我</button>
+<script>
+function myFunction(){
+	var d = new Date();
+	var weekday=new Array(7);
+	weekday[0]="周日";
+	weekday[1]="周一";
+	weekday[2]="周二";
+	weekday[3]="周三";
+	weekday[4]="周四";
+	weekday[5]="周五";
+	weekday[6]="周六";
+	var x = document.getElementById("demo");
+	x.innerHTML=weekday[d.getDay()];
+}
+</script>
+
+<!-- 显示一个钟表 -->
+<script>
+  function startTime(){
+    var today=new Date();
+    var h=today.getHours();
+    var m=today.getMinutes();
+    var s=today.getSeconds();// 在小于10的数字前加一个‘0’
+    m=checkTime(m);
+    s=checkTime(s);
+    document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+    t=setTimeout(function(){startTime()},500);
+  }
+  function checkTime(i){
+    if (i<10){
+      i="0" + i;
+    }
+    return i;
+  }
+  </script>
+  </head>
+  <body onload="startTime()">
+  <div id="txt"></div>
+    
 </body>
 </html>
