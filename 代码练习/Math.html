@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<p id="a1">单击按钮舍入与“2.5”最接近的整数</p>
+<button onclick="my1()">点我</button>
+<p id="a2">点击按钮显示一个随机数</p>
+ <button onclick="my2()">点我</button>
+ <p id="a3">单击按钮返回5到10之间的最大值。</p>
+ <button onclick="my3()">点我</button>
+ <p id="a4">单击按钮返回5到10之间最小的值。</p>
+ <button onclick="my4()">点我</button>
+ <p id="a5">单击按钮显示Euler的值</p>
+ <button onclick="my5()">点我</button>
+ <p id="a6">单击按钮显示2的自然对数</p>
+ <button onclick="my6()">点我</button>
+ <p id="a7">单击按钮显示10的自然对数</p>
+ <button onclick="my7()">点我</button>
+ <p id="a8">单击按钮显示以底数为2的E的对数</p>
+<button onclick="my8n()">点我</button>
+<p id="a9">单击按钮显示PI</p>
+<button onclick="my9()">点我</button>
+<p id="a10">单击按钮显示1/2的平方根</p>
+<button onclick="my10()">点我</button>
+<p id="a11">单击按钮显示2的平方根。</p>
+<button onclick="my11()">点我</button>
+<p id="a12">单击返回-7.25的返回值</p>
+<button onclick="my12()">点我</button>
+<p id="a13">单击按钮显示0.5的反余弦值。</p>
+<button onclick="my13()">点我</button>
+<p id="a14">单击按钮显示0.5的反正弦值。</p>
+<button onclick="my14()">点我</button>
+<p id="a15">单击按钮显示2的反正切值。</p>
+<button onclick="my15()">点我</button>
+<p id="a16">单击按钮显示坐标（4,8）与X轴的角度的弧度</p>
+<button onclick="my16()">点我</button>
+<p id="a17">单击按钮来将1.4上升到最近的整数。</p>
+<button onclick="my17()">点我</button>
+<p id="a18">单击按钮显示3的余弦值。</p>
+<button onclick="my18()">点我</button>
+<p id="a19">单击按钮显示Math.exp(1)的结果。</p>
+<button onclick="my19()">点我</button>
+<p id="a20">单击按钮将数值1.6下降到它的最近的整数。</p>
+<button onclick="my20()">点我</button>
+<p id="a21">单击按钮显示数值的自然对数。</p>
+<button onclick="my21()">点我</button>
+<p id="a22">单击按钮返回5到10之间的最大值。</p>
+<button onclick="my22()">点我</button>
+<p id="a23">单击按钮返回5到10之间最小的值。</p>
+<button onclick="my23()">点我</button>
+<p id="a24">单击按钮显示4*4*4的结果。</p>
+<button onclick="my24()">点我</button>
+<p id="a25">点击按钮显示一个随机数</p>
+<button onclick="my25()">点我</button>
+<p id="a26">单击按钮舍入与“2.5”最接近的整数</p>
+<button onclick="my26()">点我</button>
+<p id="a27">单击按钮显示3的正弦值。</p>
+<button onclick="my27()">点我</button>
+<p id="a28">单击按钮显示9的平方根。</p>
+<button onclick="my28()">点我</button>
+<p id="a29">单击按钮显示90度角的正切值。</p>
+<button onclick="my29()">点我</button>
+<h1>JavaScript Math</h1>
+<h2>The Math.tanh() 方法</h2>
+<p>Math.tanh() 返回一个数的双曲正切函数值:</p>
+<p id="a30"></p>
+<h1>JavaScript Math</h1>
+<h2>Math.trunc() 方法</h2>
+<p>Math.trunc() 方法会将数字的小数部分去掉，只保留整数部分:</p>
+<p id="a31"></p>
+<body>
+ 
+<!-- 使用round -->
+  <script>
+  function my1(){
+    document.getElementById("a1").innerHTML=Math.round(2.5);
+  }
+ 
+//  返回 0 到 1 之间的随机数
+ function my2(){
+   document.getElementById("a2").innerHTML=Math.random();
+ }
+ 
+//  返回两个给定的数中的较大的数
+ function my3(){
+   document.getElementById("a3").innerHTML=Math.max(5,10);
+ }
+ 
+//  返回两个给定的数中的较小的数
+ function my4(){
+   document.getElementById("a4").innerHTML=Math.min(5,10);
+ }
+ 
+//  >返回 Euler 数
+ function my5(){
+   document.getElementById("a5").innerHTML=Math.E;
+ }
+ 
+//  返回 2 的自然对数 
+ 
+ function my6(){
+   document.getElementById("a6").innerHTML=Math.LN2;
+ }
+
+// 返回 10 的自然对数
+function my7(){
+	document.getElementById("a7").innerHTML=Math.LN10;
+}
+
+// 返回以 2 为底的 e 的对数
+function my8(){
+	document.getElementById("a8").innerHTML=Math.LOG2E;
+}
+
+// 返回 PI
+function my9(){
+	document.getElementById("a9").innerHTML=Math.PI;
+}
+
+// 返回 1/2 的平方根
+function my10n(){
+	document.getElementById("a10").innerHTML=Math.SQRT1_2;
+}
+
+// 返回 2 的平方根
+function my11(){
+	document.getElementById("a11").innerHTML=Math.SQRT2;
+}
+
+// 返回一个数的绝对值
+function my12(){
+	document.getElementById("a12").innerHTML=Math.abs(-7.25);
+}
+
+// 返回一个数的反余弦
+function my13(){
+	document.getElementById("a13").innerHTML=Math.acos(0.5);
+}
+
+// 返回一个数的反正弦值
+function my14(){
+	document.getElementById("a14").innerHTML=Math.asin(0.5);
+}
+
+// 返回指定数的反正切值
+function my15(){
+	document.getElementById("a15").innerHTML=Math.atan(2);
+}
+atan2(y,x)
+function my16(){
+	document.getElementById("a16").innerHTML=Math.atan2(8,4);
+}
+
+// 对一个数进行上舍入
+function my17(){
+	document.getElementById("a17").innerHTML=Math.ceil(1.4);
+}
+
+// 返回一个数字的余弦值
+function my18(){
+	document.getElementById("a18").innerHTML=Math.cos(3);
+}
+
+// 返回 E 的 x 次幂的值, x 为 1
+function my19(){
+	document.getElementById("a19").innerHTML=Math.exp(1);
+}
+
+// 返回小于等于x的最大整数
+function my20(){
+	document.getElementById("a20").innerHTML=Math.floor(1.6);
+}
+
+// 返回2的自然对数
+function my21(){
+	document.getElementById("a21").innerHTML=Math.log(2);
+}
+
+// 返回两个指定的数中带有较大的值的那个数
+function my22(){
+	document.getElementById("a22").innerHTML=Math.max(5,10);
+}
+
+// 返回最小数值
+function my23(){
+	document.getElementById("a23").innerHTML=Math.min(5,10);
+}
+
+// 返回 4 的 3 次幂 (4*4*4)
+function my24(){
+	document.getElementById("a24").innerHTML=Math.pow(4,3);
+}
+
+// 返回介于 0（包含） ~ 1（不包含） 之间的一个随机数
+function my25(){
+	document.getElementById("a25").innerHTML=Math.random();
+}
+
+
+// 把一个数字舍入为最接近的整数
+function my26(){
+	document.getElementById("a26").innerHTML=Math.round(2.5);
+}
+
+// 返回数字的正弦值
+function my27(){
+	document.getElementById("a27").innerHTML=Math.sin(3);
+}
+
+// 返回一个数的平方根
+function my28(){
+	document.getElementById("a28").innerHTML=Math.sqrt(9);
+}
+
+// 返回一个表示某个角的正切的数字
+function my29(){
+	document.getElementById("a29").innerHTML=Math.tan(90);
+}
+
+// 返回一个数的双曲正切函数值
+
+document.getElementById("a30").innerHTML = Math.tanh(1);
+将数字的小数部分去掉
+document.getElementById("a31").innerHTML = Math.trunc(8.76);
+</script>
+
+</body>
+</html>

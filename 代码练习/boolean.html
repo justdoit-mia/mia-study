@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="a1">单击按钮创建一个boolean对象，显示它的constructor属性。</p>
+  <button onclick="my1()">点我</button>
+  <p id="a2">单击按钮，如果boolean值为<em>true</em>显示“green”,否则显示“red”。</p>
+  <button onclick="my2()">点我</button>
+  <p id="a3">单击按钮以字符串的形式显示Boolean对象的值。</p>
+  <button onclick="my3()">点我</button>
+  <p id="a4">单击按钮创建一个Boolean对象，并显示它的构造函数：</p>
+  <button onclick="my4()">点我</button>
+  <!-- 检查布尔值 -->
+  <script>
+    var b1=new Boolean(0);
+    var b2=new Boolean(1);
+    var b3=new Boolean("");
+    var b4=new Boolean(null);
+    var b5=new Boolean(NaN);
+    var b6=new Boolean("false");
+    document.write("0 为布尔值 "+ b1 +"<br>");
+    document.write("1 为布尔值 "+ b2 +"<br>");
+    document.write("空字符串是布尔值 "+ b3 + "<br>");
+    document.write("null 是布尔值 "+ b4+ "<br>");
+    document.write("NaN 是布尔值 "+ b5 +"<br>");
+    document.write("字符串'false' 是布尔值"+ b6 +"<br>");
+
+// myvar对象的原型创建的函数
+function my1(){
+	var myvar=new Boolean(1);
+	var x=document.getElementById("a1");
+	x.innerHTML=myvar.constructor;
+}
+
+// Boolean对象创建新方法
+Boolean.prototype.myColor=function(){
+	if (this.valueOf()==true){
+		this.color="green";
+	}
+	else{
+		this.color="red";
+	}
+}	
+function my2(){
+	var a = new Boolean(1);
+	a.myColor();
+	var x=document.getElementById("a2");
+	x.innerHTML=a.color;
+}
+
+// 布尔值转换为字符串
+function my3(){
+	var myvar=new Boolean(1);
+	var x=document.getElementById("a3");
+	x.innerHTML=myvar.toString();
+}
+
+// Boolean对象原始值
+function my4(){
+	var bool=new Boolean(0);
+	var x=document.getElementById("a4");
+	x.innerHTML=bool.valueOf();
+}
+</script>
+
+
+</body>
+</html>
