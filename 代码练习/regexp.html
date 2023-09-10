@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>点击按钮返回正则表达式的字符串值。</p>
+  <button onclick="my1()">点我</button>
+  <p id="a1"></p>
+  <p id="a2">单击显示查找的位置</p>
+  <button onclick="my2()">点我</button>
+  <p id="a3">单击按钮显示matches</p>
+  <button onclick="my3()">点我</button>
+  <p>单击按钮将段落中的第一个 Microsoft 替换成 Runoob：</p>
+  <p id="a4">Visit Microsoft!Visit Microsoft!</p>
+  <button onclick="my4()">点我</button>
+  <p id="a5">单击按钮显示分割后的数组.</p>
+  <button onclick="my5()">点我</button>
+  <p>点击按钮返回一个函数，该函数是创建对象的原型。 </p>
+  <button onclick="my6()">点我</button>
+  <p id="a6"></p>
+<!-- runoob" 进行不分大小写的搜索 -->
+<script>
+    var str = "Visit RUnoob";
+    var patt1 = /runoob/i;
+    document.write(str.match(patt1));
+ 
+// 对 "is" 进行全局搜索
+    var str="Is this all there is?";
+    var patt1=/is/g;
+    document.write(str.match(patt1);
+    
+// 对 "is" 进行全局且大小写不敏感的搜索
+    var str="Is this all there is?";
+    var patt1=/is/gi;
+    document.write(str.match(patt1));
+
+// 在字符串中对字符范围 [a-h] 进行全局搜索
+  var str="Is this all there is?";
+  var patt1=/[a-h]/g;
+  document.write(str.match(patt1));
+
+// 对不在字符范围 [a-h] 内的字符进行全局搜索
+  var str="Is this all there is?";
+  var patt1=/[^a-h]/g;
+  document.write(str.match(patt1));
+  
+// 对字符串中的 "h.t" 进行全局搜索  
+  var str="That's hot!";
+  var patt1=/h.t/g;
+  document.write(str.match(patt1));
+  
+// 对字符串中的单词字符进行全局搜索
+  var str="Give 100%!"; 
+  var patt1=/\w/g;
+  document.write(str.match(patt1));
+
+// 对数字进行全局搜索
+  var str="Give 100%!"; 
+  var patt1=/\d/g;
+  document.write(str.match(patt1));
+
+// 对字符串中的非数字字符进行全局搜索
+  var str="Give 100%!"; 
+  var patt1=/\D/g;
+  document.write(str.match(patt1));
+
+// 对字符串中的空白字符进行全局搜索
+  var str="Is this all there is?"; 
+  var patt1=/\s/g;
+  document.write(str.match(patt1));
+
+// 对字符串中的非空白字符进行全局搜索
+  var str="Is this all there is?"; 
+  var patt1=/\S/g;
+  document.write(str.match(patt1));
+
+// 对字符串中的单词的开头或结尾进行 "Run" 的全局搜索
+  var str="Visit Runooob"; 
+  var patt1=/\bRun/g;
+  document.write(str.match(patt1));
+
+// 搜索字符串中的换行字符
+  var str="Visit RUNOOB.\n Learn JavaScript."; 
+  var patt1=/\n/g;
+  document.write(str.search(patt1));
+
+// 对字符串中的八进制 127 (W) 进行全局搜索
+  var str="Visit Runoob. Hello World!"; 
+  var patt1=/\127/g;
+  document.write(str.match(patt1));
+
+// 对字符串中的十六进制 57 (W) 进行全局搜索
+  var str="Visit Runoob. Hello World!"; 
+  var patt1=/\x57/g;
+  document.write(str.match(patt1));
+
+// 对字符串中的十六进制 0057 (W) 进行全局搜索
+  var str="Visit W3Schools. Hello World!"; 
+  var patt1=/\u0057/g;
+  document.write(str.match(patt1));
+
+// 对至少一个 "o" 进行全局搜索
+  var str="Hellooo World! Hello Runoob!"; 
+  var patt1=/o+/g;
+  document.write(str.match(patt1));
+
+// 对至少一个单词字符进行全局搜索
+  var str="Hellooo World! Hello Runoob!"; 
+  var patt1=/\w+/g;
+  document.write(str.match(patt1));
+
+// 对 "l" 进行全局搜索，包括其后紧跟的零个或多个 "o"
+  var str="Hellooo World! Hello Runoob!"; 
+  var patt1=/lo*/g;
+  document.write(str.match(patt1));
+  
+// 对 "1" 进行全局搜索，包括其后紧跟的一个或多个 "0"
+    var str="1, 100 or 1000?"; 
+    var patt1= /10*/g;
+    document.write(str.match(patt1));
+
+// 对 "1" 进行全局搜索，包括其后紧跟的零个或一个 "0"
+  var str="1, 100 or 1000?"; 
+  var patt1=/10?/g;
+  document.write(str.match(patt1));
+
+// 对包含四位数字序列的子串进行全局搜索
+  var str="100, 1000 or 10000?";
+  var patt1=/\d{4}/g; 
+  document.write(str.match(patt1));
+
+// 对包含至少三位数字序列的子串进行全局搜索
+  var str="100, 1000 or 10000?";
+  var patt1=/\d{3,}/g; 
+  document.write(str.match(patt1));
+
+// 对字符串结尾的 "is" 进行全局搜索
+  var str="Is this his";
+  var patt1=/is$/g;
+  document.write(str.match(patt1));
+
+// 对字符串开头的 "Is" 进行全局搜索 
+  var str="Is this his";
+  var patt1=/^Is/g;
+  document.write(str.match(patt1));
+
+// 对其后紧跟 "all" 的 "is" 进行全局搜索
+  var str="Is this all there is";
+  var patt1=/is(?= all)/;
+  document.write(str.match(patt1));
+
+// 对其后没有紧跟 "all" 的 "is" 进行全局搜索
+  var str="Is this all there is";
+  var patt1=/is(?! all)/gi;
+  document.write(str.match(patt1));
+
+
+// 在字符串中全局搜索 "man"，并用 "person" 替换
+  var str="Every man in the world! Every woman on earth!";
+  var patt=/man/g;
+  var str2=str.replace(patt,"person");
+  document.write(str2+"<br>");
+  patt=/(wo)?man/g;
+  patt.compile(patt); 
+  str2=str.replace(patt,"person");
+  document.write(str2);
+
+// 在字符串中全局搜索 "Hello" 和 "RUNOOB" 字符串
+  var str="Hello world!";
+  //查找"Hello"
+  var patt=/Hello/g;
+  var result=patt.exec(str);
+  document.write("返回值: " +  result); 
+  //查找 "RUNOOB"
+  patt=/RUNOOB/g;
+  result=patt.exec(str);
+  document.write("<br>返回值: " +  result);
+ 
+ 
+//  在字符串中全局搜索 "Hello" 和 "Runoob" 字符串
+  var str="Hello world!";
+  //查找"Hello"
+  var patt=/Hello/g;
+  var result=patt.test(str);
+  document.write("返回值: " +  result); 
+//查找 "Runoob"
+  patt=/Runoob/g;
+  result=patt.test(str);
+  document.write("<br>返回值: " +  result);
+  
+// 返回正则表达式的字符串值
+   function my1() {
+      var patt = new RegExp("RUNOOB", "g");
+      var res = patt.toString();
+      document.getElementById("a1").innerHTML = res;
+  }
+  
+// 查找 "Runoob"
+  function my2(){
+    var str="Visit Runoob!"; 
+    var n=str.search("Runoob");
+    document.getElementById("a2").innerHTML=n;
+  }
+  
+// 在字符串中查找 "ain"
+  function my3(){
+    var str="The rain in SPAIN stays mainly in the plain"; 
+    var n=str.match(/ain/g);
+    document.getElementById("a3").innerHTML=n;
+  }
+
+// 第一个 "Microsoft" 被找到，它就被替换为 "Runoob"
+  function my4(){
+	var str=document.getElementById("a4").innerHTML; 
+	var n=str.replace("Microsoft","Runoob");
+	document.getElementById("a4").innerHTML=n;
+  }
+
+// 把一个字符串分割成字符串数组
+  function my5(){
+	var str="How are you doing today?";
+	var n=str.split(" ");
+	document.getElementById("a5").innerHTML=n;
+  }
+
+// 返回正则表达式原型的函数
+  function my6() {
+    var patt = new RegExp("RUNOOB", "g");
+    var res = patt.constructor;
+    document.getElementById("a6").innerHTML = res;
+  }
+
+// 查看正则表达式是否具有标志 g
+  var str="Visit RUNOOB!";
+  var patt1=/RUN/g;
+  if(patt1.global)
+  {
+      document.write("g 模式有设置!");
+  }
+  else
+  {
+      document.write("g 模式没有设置!");
+  }
+
+// 查看是否设置了 "i" 标志
+  var str="Visit RUNOOB!";
+  var patt1=/RUN/i;
+  if(patt1.ignoreCase)
+  {
+      document.write("i 模式有设置!");
+  }
+  else
+  {
+      document.write("i 模式没有设置!");
+  }
+
+// 查找是否具有标志 m
+  var str="Visit RUNOOB!";
+  var patt1=/RUN/gi;
+  if(patt1.multiline)
+  {
+      document.write("m 模式有设置!");
+  }
+  else
+  {
+      document.write("m 模式没有设置!");
+  }
+
+// 返回与正则模式匹配的文本
+  var str="Visit RUNOOB";
+  var patt1=/RUN/g;
+  document.write("The text of the RegExp is: "+patt1.source);
+
+// 在字符串中不区分大小写找"runoob"
+  var str = "Visit RUnoob";
+  var patt1 = /runoob/i;
+  document.write(str.match(patt1));
+
+// 全文查找 "is"
+  var str="Is this all there is?";
+  var patt1=/is/g;
+  document.write(str.match(patt1));
+
+// 全文查找和不区分大小写搜索 "is"
+  var str="Is this all there is?";
+  var patt1=/is/gi;
+  document.write(str.match(patt1));
+  test()
+  var patt1=new RegExp("e");
+  document.write(patt1.test("The best things in life are free"));
+
+// 构造函数创造正则对象，在前面加反斜杠 \ 
+  var str = 'runoob';
+  var patt1 = new RegExp('\\w', 'g'); // 有转义作为正则表达式处理
+  var patt2 = new RegExp('\w', 'g');  // 无转义作为字符串处理
+  var patt3 =/\w+/g;  // 与 patt1 效果相同
+  document.write(patt1.test(str)) //输出 true
+  document.write("<br>") 
+  document.write(patt2.test(str)) //输出 false
+  document.write("<br>") 
+  document.write(patt3.test(str)) //输出 true
+  exec()
+  var patt1=new RegExp("e");
+  document.write(patt1.exec("The best things in life are free"));
+
+</script> 
+</body>
+</html>
