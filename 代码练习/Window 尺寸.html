@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+  <p id="a"></p>
+
+    function newDoc(){
+        window.location.assign("https://www.runoob.com")
+    }
+
+ 
+  function goBack()
+  {
+      window.history.back()
+  }
+
+  function goForward()
+  {
+        window.history.forward()
+  }
+
+  function my1(){
+    alert("你好，我是一个警告框！");
+  }
+  </script>
+  <p>点击按钮，显示确认框。</p>
+  <button onclick="my2()">点我</button>
+  <p id="a1"></p>
+  <p>点击按钮查看输入的对话框。</p>
+  <button onclick="my3()">点我</button>
+  <p id="a2"></p>
+  <p>点击按钮在弹窗中使用换行。</p>
+  <button onclick="my4()">点我</button>
+  <p id="a3"></p>
+</head>
+<body>
+  Window 尺寸  
+  <script>
+  var w=window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+  var h=window.innerHeight
+        || document.documentElement.clientHeight
+        || document.body.clientHeight;
+  x=document.getElementById("a");
+  x.innerHTML="浏览器window宽度: " + w + ", 高度: " + h + "。"
+
+  
+  // 屏幕的可用宽度
+    document.write("可用宽度: " + screen.availWidth);
+    </script>
+
+ <!-- 屏幕的可用高度 -->
+ <script>
+  document.write("可用高度: " + screen.availHeight);
+  </script>
+
+ <!-- location.assign() 方法加载新的文档 -->
+ <input type="button" value="加载新文档" onclick="newDoc()">
+
+ <!-- 在页面上创建后退按钮 -->
+  <input type="button" value="Back" onclick="goBack()">
+
+  <!-- 在页面上创建一个向前的按钮 -->
+  <input type="button" value="Forward" onclick="goForward()">
+
+  <!-- Window Navigator -->
+  <div id="example"></div>
+  <script>
+  txt = "<p>浏览器代号: " + navigator.appCodeName + "</p>";
+  txt+= "<p>浏览器名称: " + navigator.appName + "</p>";
+  txt+= "<p>浏览器版本: " + navigator.appVersion + "</p>";
+  txt+= "<p>启用Cookies: " + navigator.cookieEnabled + "</p>";
+  txt+= "<p>硬件平台: " + navigator.platform + "</p>";
+  txt+= "<p>用户代理: " + navigator.userAgent + "</p>";
+  txt+= "<p>用户代理语言: " + navigator.language + "</p>";
+  document.getElementById("example").innerHTML=txt;
+  </script>   
+  
+  <!-- 警告框 -->
+  <input type="button" onclick="my1()" value="显示警告框" />
+
+  <!-- 确认框 -->
+<script>
+function my2(){
+	var x;
+	var r=confirm("按下按钮!");
+	if (r==true){
+		x="你按下了\"确定\"按钮!";
+	}
+	else{
+		x="你按下了\"取消\"按钮!";
+	}
+	document.getElementById("a1").innerHTML=x;
+}
+</script>
+
+<!-- 提示框 -->
+<script>
+function my3(){
+	var x;
+	var person=prompt("请输入你的名字","Harry Potter");
+	if (person!=null && person!=""){
+	    x="你好 " + person + "! 今天感觉如何?";
+	    document.getElementById("a2").innerHTML=x;
+	}
+}
+</script>
+
+<!-- 换行 -->
+<script>
+function my4(){
+	alert("Hello\nHow are you?");
+}
+</script>
+</body>
+</html>
