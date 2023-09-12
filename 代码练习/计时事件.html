@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function timedText(){
+      var x=document.getElementById('txt');
+      var t1=setTimeout(function(){x.value="2 秒"},2000);
+      var t2=setTimeout(function(){x.value="4 秒"},4000);
+      var t3=setTimeout(function(){x.value="6 秒"},6000);
+    }
+    </script>
+    <p>点击上面的按钮，输出的文本将告诉你2秒，4秒，6秒已经过去了。</p>
+
+    <script>
+      function setCookie(cname,cvalue,exdays){
+        var d = new Date();
+        d.setTime(d.getTime()+(exdays*24*60*60*1000));
+        var expires = "expires="+d.toGMTString();
+        document.cookie = cname+"="+cvalue+"; "+expires;
+      }
+      function getCookie(cname){
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0; i<ca.length; i++) {
+          var c = ca[i].trim();
+          if (c.indexOf(name)==0) { return c.substring(name.length,c.length); }
+        }
+        return "";
+      }
+      function checkCookie(){
+        var user=getCookie("username");
+        if (user!=""){
+          alert("欢迎 " + user + " 再次访问");
+        }
+        else {
+          user = prompt("请输入你的名字:","");
+            if (user!="" && user!=null){
+              setCookie("username",user,30);
+            }
+        }
+      }
+      </script>
+</head>
+<body>
+  <p>单击按钮每3秒出现一个“Hello”警告框。</p>
+  <p>再次点击警告框，经过3秒出现新的警告框，这将一直执行 ...</p>
+  <button onclick="my1()">点我</button>
+
+  <p>在页面显示一个时钟</p>
+  <p id="a1"></p>
+
+  <p>页面上显示时钟：</p>
+  <p id="a2"></p>
+  <button onclick="s1()">停止</button>
+
+  <p>点击第一个按钮等待3秒后出现"Hello"弹框。</p>
+  <p>点击第二个按钮来阻止第一个函数运行。（你必须在3秒之前点击它）。</p>
+  <button onclick="my3()">点我</button>
+  <button onclick="s2()">停止弹框</button>
+
+  <p>点击按钮，在等待 3 秒后弹出 "Hello"。</p>
+  <button onclick="my2()">点我</button>
+
+
+  <!-- setInterval() 方法
+  每三秒弹出 "hello" -->
+  <script>
+  function my1(){
+    setInterval(function(){alert("Hello")},3000);
+  }
+
+  
+  // 显示当前时间
+  var myVar=setInterval(function(){myTimer()},1000);
+  function myTimer(){
+	var d=new Date();
+	var t=d.toLocaleTimeString();
+	 document.getElementById("a1").innerHTML=t;
+  }
+
+  // "停止" 按钮
+  var myVar=setInterval(function(){myTimer()},1000);
+  function myTimer(){
+	var d=new Date();
+	var t=d.toLocaleTimeString();
+	 document.getElementById("a2").innerHTML=t;
+  }
+  function a1(){
+	 clearInterval(myVar);
+  }
+
+  // setTimeout() 方法
+  // 等待3秒，然后弹出 "Hello"
+  function my2(){
+    setTimeout(function(){alert("Hello")},3000);
+  }
+
+  // 添加了 "Stop the alert" 按钮
+  var myVar;
+  function my3(){
+    myVar=setTimeout(function(){alert("Hello")},3000);
+  }
+  function s2(){
+    clearTimeout(myVar);
+  }
+
+  <form>
+  <input type="button" value="显示文本时间!" onclick="timedText()" />
+  <input type="text" id="txt" />
+  </form>
+  
+  // 设置 cookie 值的函数
+    function setCookie(cname,cvalue,exdays)
+  {
+  var d = new Date();
+  d.setTime(d.getTime()+(exdays*24*60*60*1000));
+  var expires = "expires="+d.toGMTString();
+  document.cookie = cname + "=" + cvalue + "; " + expires;
+  }
+
+  // 获取 cookie 值的函数
+    function getCookie(cname)
+  {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0; i<ca.length; i++) 
+  {
+    var c = ca[i].trim();
+    if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+  }
+  return "";
+  } 
+
+  // 检测 cookie 值的函数
+    function checkCookie()
+  {
+  var username=getCookie("username");
+  if (username!="")
+  {
+    alert("Welcome again " + username);
+  }
+  else 
+  {
+    username = prompt("Please enter your name:","");
+    if (username!="" && username!=null)
+    {
+      setCookie("username",username,365);
+    }
+  }
+  }
+
+  // 完整实例
+  <body onload="checkCookie()"></body>
+
+</body>
+</html>
