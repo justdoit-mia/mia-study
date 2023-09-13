@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 引用jQuery -->
+  <script src="https://cdn.staticfile.org/jquery/3.4.0/jquery.min.js">
+  </script>  
+  <!-- jQuery 描述
+ JavaScript 方式 -->
+ <script>
+   function myFunction1()
+ {
+    var obj=document.getElementById("h01");
+    obj.innerHTML="Hello jQuery";
+ }
+ onload=myFunction1;
+
+  function myFunction2()
+ {
+     $("#h01").html("Hello jQuery");
+ }
+ $(document).ready(myFunction2);
+ </script>
+
+</body>
+</html>

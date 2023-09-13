@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script
+  src="https://cdn.staticfile.org/prototype/1.7.3/prototype.min.js">
+  </script>
+</head>
+<body>
+  Prototype 描述
+  JavaScript 方式
+  <script>
+    function myFunction()
+{
+    var obj=document.getElementById("h01");
+    obj.innerHTML="Hello Prototype";
+}
+onload=myFunction;
+  </script>
+
+Prototype 方式
+<script>
+  function myFunction()
+{
+    $("h01").insert("Hello Prototype!");
+}
+Event.observe(window,"load",myFunction);
+</script>
+</body>
+</html>
