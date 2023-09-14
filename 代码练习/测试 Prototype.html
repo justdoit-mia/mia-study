@@ -9,24 +9,22 @@
   </script>
 </head>
 <body>
-  Prototype 描述
-  JavaScript 方式
+  <!-- Prototype 描述
+  JavaScript 方式 -->
   <script>
-    function myFunction()
+    function myFunction1()
 {
     var obj=document.getElementById("h01");
     obj.innerHTML="Hello Prototype";
 }
-onload=myFunction;
-  </script>
+onload=myFunction1;
 
-Prototype 方式
-<script>
-  function myFunction()
+<!-- Prototype 方式 -->
+  function myFunction2()
 {
     $("h01").insert("Hello Prototype!");
 }
-Event.observe(window,"load",myFunction);
+Event.observe(window,"load",myFunction2);
 </script>
 </body>
 </html>

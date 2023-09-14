@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $(".ex .hide").click(function(){
+      $(this).parents(".ex").hide("slow");
+    });
+  });
+  </script>
+  <style type="text/css"> 
+  div.ex
+  {
+    background-color:pink;
+    padding:7px;
+    border:solid 1px pink;
+  }
+  </style>
+</head>
+<body>
+  <h3>Google</h3>
+<div class="ex">
+<button class="hide">点我隐藏</button>
+<p>名: Google<br> 
+点 URL：http://www.google.com</p>
+</div>
+
+<h3>菜鸟教程</h3>
+<div class="ex">
+<button class="hide">点我隐藏</button>
+<p>名: 菜鸟教程<br> 
+点 URL：http://www.runoob.com</p>
+
+</div>
+</body>
+</html>
