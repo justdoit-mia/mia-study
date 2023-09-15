@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script> 
+  $(document).ready(function(){
+    $("#flip").click(function(){
+      $("#panel").slideDown("slow");
+    });
+  });
+  </script>
+   
+  <style type="text/css"> 
+  #panel,#flip
+  {
+    padding:5px;
+    text-align:center;
+    background-color:pink;
+    border:solid 1px pink;
+  }
+  #panel
+  {
+    padding:50px;
+    display:none;
+  }
+  </style>
+</head>
+<body>
+  <div id="flip">点我滑下面板</div>
+<div id="panel">Hello world!</div>
+</body>
+</html>
