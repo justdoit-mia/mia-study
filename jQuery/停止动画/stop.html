@@ -9,7 +9,10 @@
   <script> 
   $(document).ready(function(){
     $("#flip").click(function(){
-      $("#panel").slideDown("slow");
+      $("#panel").slideDown(5000);
+    });
+    $("#stop").click(function(){
+      $("#panel").stop();
     });
   });
   </script>
@@ -18,7 +21,7 @@
   #panel,#flip
   {
     padding:5px;
-    text-align:center;                                                                                                                                                                                                                                                 
+    text-align:center;
     background-color:pink;
     border:solid 1px pink;
   }
@@ -30,7 +33,8 @@
   </style>
 </head>
 <body>
-  <div id="flip">点我滑下面板</div>
+  <button id="stop">停止滑动</button>
+<div id="flip">向下滑动面板</div>
 <div id="panel">Hello world!</div>
 </body>
 </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script> 
+  $(document).ready(function(){
+    $("#start").click(function(){
+      $("div").animate({left:'100px'},5000);
+      $("div").animate({fontSize:'3em'},5000);
+    });
+    
+    $("#stop").click(function(){
+      $("div").stop();
+    });
+  
+    $("#stop2").click(function(){
+      $("div").stop(true);
+    });
+  
+    $("#stop3").click(function(){
+      $("div").stop(true,true);
+    });
+    
+  });
+  </script> 
+</head>
+<body>
+  <button id="start">开始</button>
+<button id="stop">停止</button>
+<button id="stop2">停止所有</button>
+<button id="stop3">停止动画，但完成动作</button>
+<div style="background:pink;height:100px;width:200px;position:absolute;">ABCDE</div>
+
+</body>
+</html>
