@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("button").click(function(){
+      var txt="";
+      txt+="div 宽度: " + $("#div1").width() + "</br>";
+      txt+="div 高度: " + $("#div1").height() + "</br>";
+      txt+="div 宽度，包含内边距和边框: " + $("#div1").outerWidth() + "</br>";
+      txt+="div 高度，包含内边距和边框: " + $("#div1").outerHeight();
+      $("#div1").html(txt);
+    });
+  });
+  </script>
+</head>
+<body>
+  <div id="div1" style="height:100px;width:300px;padding:10px;margin:3px;border:1px solid yellow;background-color:pink;"></div>
+<br>
+
+<button>显示 div 元素的尺寸</button>
+<p>outerWidth() - 返回元素的宽度 (包含内边距和边框)</p>
+<p>outerHeight() - 返回元素的高度 (包含内边距和边框)</p>
+
+</body>
+</html>
