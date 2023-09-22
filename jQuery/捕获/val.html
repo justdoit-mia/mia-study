@@ -9,13 +9,13 @@
   <script>
   $(document).ready(function(){
     $("button").click(function(){
-      $("#div1").load("/try/ajax/demo_test.txt #p1");
+      alert("值为: " + $("#test").val());
     });
   });
   </script>
 </head>
 <body>
-  <div id="div1"><h2>使用 jQuery AJAX 修改文本</h2></div>
-<button>获取外部文本</button>
+  <p>名称: <input type="text" id="test" value="菜鸟教程"></p>
+<button>显示值</button>
 </body>
 </html>

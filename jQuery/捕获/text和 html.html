@@ -8,14 +8,18 @@
   </script>
   <script>
   $(document).ready(function(){
-    $("button").click(function(){
-      $("#div1").load("/try/ajax/demo_test.txt #p1");
+    $("#btn1").click(function(){
+      alert("Text: " + $("#test").text());
+    });
+    $("#btn2").click(function(){
+      alert("HTML: " + $("#test").html());
     });
   });
   </script>
 </head>
 <body>
-  <div id="div1"><h2>使用 jQuery AJAX 修改文本</h2></div>
-<button>获取外部文本</button>
+  <p id="test">这是段落中的 <b>粗体</b> 文本。</p>
+<button id="btn1">显示文本</button>
+<button id="btn2">显示 HTML</button>
 </body>
 </html>

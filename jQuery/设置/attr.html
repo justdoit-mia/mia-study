@@ -9,13 +9,14 @@
   <script>
   $(document).ready(function(){
     $("button").click(function(){
-      $("#div1").load("/try/ajax/demo_test.txt #p1");
+      $("#runoob").attr("href","http://www.runoob.com/jquery");
     });
   });
   </script>
 </head>
 <body>
-  <div id="div1"><h2>使用 jQuery AJAX 修改文本</h2></div>
-<button>获取外部文本</button>
+  <p><a href="http://www.runoob.com" id="runoob">菜鸟教程</a></p>
+<button>修改 href 值</button>
+<p>点击按钮修改后，可以点击链接查看链接地址是否变化。</p>
 </body>
 </html>

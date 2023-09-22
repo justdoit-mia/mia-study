@@ -9,13 +9,15 @@
   <script>
   $(document).ready(function(){
     $("button").click(function(){
-      $("#div1").load("/try/ajax/demo_test.txt #p1");
+      $("p").hide("slow",function(){
+        alert("段落现在被隐藏了");
+      });
     });
   });
   </script>
 </head>
 <body>
-  <div id="div1"><h2>使用 jQuery AJAX 修改文本</h2></div>
-<button>获取外部文本</button>
+  <button>隐藏</button>
+<p>我们段落内容，点击“隐藏”按钮我就会消失</p>
 </body>
 </html>

@@ -9,13 +9,14 @@
   <script>
   $(document).ready(function(){
     $("button").click(function(){
-      $("#div1").load("/try/ajax/demo_test.txt #p1");
+      $("p").hide(1000);
+      alert("现在段落被隐藏了");
     });
   });
   </script>
 </head>
 <body>
-  <div id="div1"><h2>使用 jQuery AJAX 修改文本</h2></div>
-<button>获取外部文本</button>
+  <button>隐藏</button>
+<p>这是一个段落，内容很少</p>
 </body>
 </html>

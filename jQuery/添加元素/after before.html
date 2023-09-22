@@ -8,14 +8,20 @@
   </script>
   <script>
   $(document).ready(function(){
-    $("button").click(function(){
-      $("#div1").load("/try/ajax/demo_test.txt #p1");
+    $("#btn1").click(function(){
+      $("img").before("<b>之前</b>");
+    });
+  
+    $("#btn2").click(function(){
+      $("img").after("<i>之后</i>");
     });
   });
   </script>
 </head>
 <body>
-  <div id="div1"><h2>使用 jQuery AJAX 修改文本</h2></div>
-<button>获取外部文本</button>
+  <img src="/tp/logo2.png" >
+<br><br>
+<button id="btn1">之前插入</button>
+<button id="btn2">之后插入</button>
 </body>
 </html>
