@@ -4,18 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  <script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js">
   </script>
   <script>
   $(document).ready(function(){
     $("button").click(function(){
-      $("#div1").load("/try/ajax/demo_test.txt");
+      $("p").hide();
     });
   });
   </script>
 </head>
 <body>
-  <div id="div1"><h2>使用 jQuery AJAX 修改文本内容</h2></div>
-<button>获取外部内容</button>
+  <h2>这是一个标题</h2>
+<p>这是一个段落</p>
+<p>这是另一个段落</p>
+<button>点</button>
+<!-- 隐藏所有 <p> 元素 -->
 </body>
 </html>

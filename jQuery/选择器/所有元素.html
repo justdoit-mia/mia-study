@@ -8,14 +8,19 @@
   </script>
   <script>
   $(document).ready(function(){
-    $("button").click(function(){
-      $("#div1").load("/try/ajax/demo_test.txt");
-    });
+    $("*").css("background-color","pink");
   });
   </script>
 </head>
 <body>
-  <div id="div1"><h2>使用 jQuery AJAX 修改文本内容</h2></div>
-<button>获取外部内容</button>
+  <h1>我的主页</h1>
+<p>菜鸟教程</p>
+<p>学的不仅是技术，更是梦想！</p>
+<p>你喜欢哪个网站:</p>
+<ul id="choose">
+<li>菜鸟教程</li>
+<li>Google</li>
+<li>淘宝</li>
+</ul>
 </body>
 </html>

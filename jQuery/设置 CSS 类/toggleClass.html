@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("button").click(function(){
+      $("h1,h2,p").toggleClass("blue");
+    });
+  });
+  </script>
+  <style type="text/css">
+  .blue
+  {
+  color:pink;
+  }
+  </style>
+</head>
+<body>
+  <h1 class="blue">标题 1</h1>
+<h2 class="blue">标题 2</h2>
+<p class="blue">这是一个段落。</p>
+<p>这是另外一个段落。</p>
+<br>
+<button>切换 class</button>
+</body>
+</html>
