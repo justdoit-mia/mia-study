@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("p[title|='Tomorrow']").css("background-color","pink");});  
+  </script>
+</head>
+<body>
+  <p title="Tomorrow">一个段落</p>
+<p title="tomorrow">一个段落</p>
+<p title="Tom">这是一个段落</p>
+<p title="See You Tomorrow">这是一个段落</p>
+<p title="Tomorrow-the day after today">这是一个段落</p>
+<!-- <p>这个选择器选择 title 属性值为 'Tomorrow' 的所有元素，或者以 'Tomorrow' 开头。</p> -->
+
+</body>
+</html>

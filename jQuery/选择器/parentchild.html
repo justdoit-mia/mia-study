@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("div > span").css("background-color","pink");
+  });
+  </script>
+</head>
+<body>
+  <h2> $("div > span") 会选取什么元素?</h2>
+<h4>这个 div 元素有两个直接的子元素 p 和 span:</h4>
+<div style="border:1px solid black;padding:10px;">
+<p>这是一个段落</p>
+<span>这是在 span 元素中的文本</span>
+</div>
+<h4>这个 div 元素只有一个直接子元素 p:</h4>
+<div style="border:1px solid black;padding:10px;">
+<p>这是一个段落 <span>这个 span
+元素在 p 标签里面 </span></p>
+</div>
+</body>
+</html>

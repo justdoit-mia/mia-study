@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("p:nth-child(3)").css("background-color","pink");
+  });
+  </script>
+</head>
+<body>
+  <h1>body 中的标题</h1>
+<p>body 中第一个段落。</p>
+<p>body 中第二个段落（body 的第三个子元素）。</p>
+<div style="border:1px solid;">
+<span>div 中的一个 span 元素。</span>
+<p>div 中第一个段落。</p>
+<p>div 中第二个段落（div 的第三个子元素）。</p>
+<p>div 中的最后一个段落。</p>
+</div><br>
+<div style="border:1px solid;">
+	<p>另一个 div 中第一个段落。</p>
+	<p>另一个 div 中第二个段落。</p>
+	<p>另一个 div 中的最后一个段落（div 的第三个子元素）。</p>
+</div>
+<p>body 中最后一个段落。</p>
+</body>
+</html>

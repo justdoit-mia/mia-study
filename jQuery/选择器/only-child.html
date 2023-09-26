@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("p:only-child").css("background-color","pink");
+  });
+  </script>
+</head>
+<body>
+  <div style="border:1px solid;">
+    <p>第一个子元素</p>
+    <p>最后一个子元素</p>
+    </div><br>
+    <div style="border:1px solid;">
+    <p>只有一个子元素</p>
+    </div><br>
+    <div style="border:1px solid;">
+    <p>第一个子元素</p>
+    <p>最后一个子元素</p>
+    </div><br>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("input[name*='nation']").css("background-color","pink");
+  });
+  </script>
+</head>
+<body>
+  <input name ="nationality" type="text" value="Chinese">
+<input name="nation" type="text" value="English">
+<input name="country" type="text" value="Germany">
+<input name="anothernation" type="text" value="Norwegian">
+
+<!-- <p>选取所有 name 属性包含 'nation' 字符串的 input 元素。</p> -->
+
+</body>
+</html>
