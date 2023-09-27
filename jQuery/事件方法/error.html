@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://apps.bdimg.com/libs/jquery/1.7.0/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("img").error(function(){
+      $("img").replaceWith("<p>图片加载错误!</p>");
+    });
+    $("button").click(function(){
+      $("img").error();
+    });
+  });
+  </script>
+</head>
+<body>
+  <img src="/tp/img_pulpitrock.jpg" alt="Pulpit rock" width="284" height="213">
+<br>
+<button>图片触发 error 事件</button>
+</body>
+</html>

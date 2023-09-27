@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>.
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("div").click(function(event){
+      event.stopPropagation();
+      alert("检测 event.stopPropagation() 是否被调用: " +  event.isPropagationStopped());
+    });
+  });
+  </script>
+</head>
+<body>
+  <div style="height:100px;width:300px;padding:10px;border:1px solid wheat;background-color:pink;">点击这个 div 元素</div>
+</body>
+</html>

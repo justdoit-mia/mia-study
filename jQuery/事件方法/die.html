@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://apps.bdimg.com/libs/jquery/1.7.0/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("p").live("click",function(){
+      $(this).slideToggle();
+    });
+    $("button").click(function(){
+      $("p").die();
+    });
+  });
+  </script>
+</head>
+<body>
+  <p>一个段落</p>
+<p>另一个段落</p>
+<p>点击任意一个段落，消失</p>
+<button>移除事件句柄，p 元素的click事件通过 live() 方法来添加。</button><br><br>
+
+
+</body>
+</html>

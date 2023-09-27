@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("input").blur(function(){
+      alert("输入框失去了焦点");
+    });
+  });
+  </script>
+</head>
+<body>
+  
+输入你的名字: <input type="text">
+<!-- <p>在输入框写些东西，然后点击输入框外，让其失去焦点。</p> -->
+
+</body>
+</html>
