@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.7/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("p").toggle(
+    function(){$("p").css({"color":"red"});},
+    function(){$("p").css({"color":"blue"});},
+    function(){$("p").css({"color":"green"});
+  });
+});
+</script>
+</head>
+<body>
+  <p style="font-size:40px">点</p>
+  <!-- <div><b>注意:</b>toggle() 方法在 jQuery 版本 1.8 中被废弃，在版本 1.9 中被移除。</div>  -->
+
+</body>
+</html>

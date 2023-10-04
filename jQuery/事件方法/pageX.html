@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $(document).mousemove(function(event){ 
+      $("span").text("X: " + event.pageX + ", Y: " + event.pageY); 
+    });
+  });
+  </script>
+</head>
+<body>
+  <p>鼠标指针在: <span></span></p>
+</body>
+</html>

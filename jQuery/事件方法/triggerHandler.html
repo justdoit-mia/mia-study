@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("input").select(function(){
+      $("input").after("select 事件触发！");
+    });
+    $("button").click(function(){
+      $("input").triggerHandler("select");
+    });
+  });
+  </script>
+</head>
+<body>
+  <input type="text" value="Hello World">
+<br><br>
+<button>触发输入框的 select 事件</button>
+<p>该方法与 trigger() 方法类似，不同的是 trigger() 也触发事件的默认行为（比如表单提交）。</p>
+
+</body>
+</html>

@@ -4,20 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-
   <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
   </script>
   <script>
   $(document).ready(function(){
-    $("p").hover(function(){
-      $("p").css("background-color","yellow");
-      },function(){
-      $("p").css("background-color","pink");
+    $(".btn1").click(function(){
+      $("p").fadeOut()
+    });
+    $(".btn2").click(function(){
+      $("p").fadeIn();
     });
   });
   </script>
 </head>
 <body>
-  <p>鼠标移动到这个段落</p>
+  <p>一个段落</p>
+<button class="btn1">淡出</button>
+<button class="btn2">淡入</button>
+
 </body>
 </html>

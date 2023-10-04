@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  i=0;
+  $(document).ready(function(){
+    $("input").keypress(function(){
+      $("span").text(i+=1);
+    });
+  });
+  </script>
+</head>
+<body>
+  输入你的名字: <input type="text">
+<p>按键的次数: <span>0</span></p>
+
+</body>
+</html>

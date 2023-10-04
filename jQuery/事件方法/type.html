@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("p").on("click dblclick mouseover mouseout",function(event){
+      $("div").html("Event: " + event.type);
+    });
+  });
+  </script>
+</head>
+<body>
+  <p>这个段落设置了点 click, double-click, mouseover 和 mouseout 事件。<br>
+    如果你触发了其中一个事件，div 中会显示事件类型。</p>
+    <div />
+    
+</body>
+</html>

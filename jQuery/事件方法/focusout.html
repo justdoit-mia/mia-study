@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("div").focusin(function(){
+      $(this).css("background-color","#FFFFCC");
+    });
+    $("div").focusout(function(){
+      $(this).css("background-color","#FFFFFF");
+    });
+  });
+  </script>
+</head>
+<body>
+  <div style="border: 1px solid black;padding:10px;">
+    First name: <input type="text"><br>
+    Last name: <input type="text">
+    </div>
+    <p>点击输入框获取焦点，点击输入框外的部分失去焦点。</p>
+    
+</body>
+</html>

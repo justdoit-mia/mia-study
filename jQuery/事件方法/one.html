@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("p").one("click",function(){
+      $(this).animate({fontSize:"+=6px"});
+    });
+  });
+  </script>
+</head>
+<body>
+  <p>一个段落 </p>
+<p>这是另一个段落</p>
+<p>点击任意一个段落来修改段落的字体大小，每个段落只会执行一次。</p>
+
+</body>
+</html>

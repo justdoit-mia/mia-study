@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("div").mouseup(function(){
+      $(this).after("<p style='color:green;'>释放鼠标按钮。</p>");
+    });
+    $("div").mousedown(function(){
+      $(this).after("<p style='color:purple;'>按下鼠标按钮。</p>");
+    });
+   });
+  </script>
+</head>
+<body>
+  <div>在这个 div 元素中按下和释放鼠标按钮</div>
+</body>
+</html>

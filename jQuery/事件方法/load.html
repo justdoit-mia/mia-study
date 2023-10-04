@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("img").load(function(){
+      alert("图片已载入");
+    });
+  });
+  </script>
+</head>
+<body>
+  <img src="/tp/rock600x400 (1).jpg" alt="图片文字描述" width="304" height="236">
+<p><b>注意:</b> 这个事件在不同浏览器效果有所不同，如果图片已缓存该事件则不会触发。</p>
+
+</body>
+</html>

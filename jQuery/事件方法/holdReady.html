@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+  <button id="first">点击测试弹出</button>
+<button id="second">解除延迟</button> 
+<script> 
+	$.holdReady(true) 	 
+	$(document).ready(function(){ 
+		$("#first").click(function(){ 
+			alert("解除延迟后被弹出"); 
+		}) 
+	}) 
+	$("#second").click(function(){ 
+		$.holdReady(false); 
+	}) 
+</script>
+</body>
+</html>

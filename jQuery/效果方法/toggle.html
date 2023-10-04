@@ -4,19 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script src="https://apps.bdimg.com/libs/jquery/1.7.0/jquery.js">
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
   </script>
   <script>
   $(document).ready(function(){
-    $("button").live("click",function(){
-      $("p").slideToggle();
+    $("button").click(function(){
+      $("p").toggle();
     });
   });
   </script>
 </head>
 <body>
-  <p>这是一个段落</p>
-<button>点</button>
-<br><br>
+  <p>一个段落</p>
+<button>切换  hide() 和 show()</button>
 </body>
 </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("body").delegate("p","click",function(){
+      $(this).slideToggle();
+    });
+    $("button").click(function(){
+      $("body").undelegate();
+    });
+  });
+  </script>
+</head>
+<body>
+  <p>一个段落</p>
+<p>另一个段落</p>
+<p>点击任意段落(p 元素)，该段落就会消失。</p>
+<button>使用 delegate() 方法移除所有段落(p 元素)的事件句柄</button>
+
+</body>
+</html>

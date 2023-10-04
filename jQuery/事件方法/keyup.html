@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("input").keydown(function(){
+      $("input").css("background-color","yellow");
+    });
+    $("input").keyup(function(){
+      $("input").css("background-color","pink");
+    });
+  });
+  </script>
+</head>
+<body>
+  输入你的名字: <input type="text">
+<p>在以上输入框中输入你的名字。在按键按下后输入框背景颜色会改变。</p>
+
+</body>
+</html>
