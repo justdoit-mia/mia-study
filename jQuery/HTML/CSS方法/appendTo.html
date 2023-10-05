@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("button").click(function(){
+      $("<span>Hello World!</span>").appendTo("p");
+    });
+  });
+  </script>
+</head>
+<body>
+  <button>在每个P元素结尾插入span元素</button>
+<p>一个段落</p>
+<p>另一个段落</p>
+
+</body>
+</html>

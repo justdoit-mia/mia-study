@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("button").click(function(){
+      alert($("p").hasClass("intro"));
+    });
+  });
+  </script>
+  <style type="text/css">
+  .intro{
+    font-size:120%;
+    color:pink;
+  }
+  </style>
+</head>
+<body>
+  <h1>一个段落标题</h1>
+<p class="intro">一个段落</p>
+<p> 另一个段落</p>
+<button>是否有 p 元素使用了 "intro" 类?</button>
+
+</body>
+</html>

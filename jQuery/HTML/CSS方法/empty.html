@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("button").click(function(){
+      $("div").empty();
+    });
+  });
+  </script>
+</head>
+<body>
+  <div style="height:100px;background-color:pink">
+    这是一些文本。
+    <p>这是div块中的一个段落。</p>
+    </div>
+    <p>这是div块外部的一个段落。</p>
+    <button>移除div块中的内容</button>
+</body>
+</html>

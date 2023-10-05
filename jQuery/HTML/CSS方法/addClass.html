@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("button").click(function(){
+      $("p:first").addClass("intro");
+    });
+  });
+  </script>
+  <style>
+  .intro{
+    font-size:150%;
+    color:pink ;
+  }
+  </style>
+</head>
+<body>
+  <h1>一个标题</h1>
+<p>一个段落</p>
+<p>另一个段落</p>
+<button>给第一个P元素添加一个类名</button>
+
+</body>
+</html>

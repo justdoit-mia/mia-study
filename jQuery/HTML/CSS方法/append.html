@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("#btn1").click(function(){
+      $("p").append(" <b>文本</b>.");
+    });
+    $("#btn2").click(function(){
+      $("ol").append("<li>列表项</li>");
+    });
+  });
+  </script>
+</head>
+<body>
+  <p>这是一个段落</p>
+<p>这是另一个段落</p>
+<ol>
+<li>列表项 1</li>
+<li>列表项 2</li>
+<li>列表项 3</li>
+</ol>
+<button id="btn1">文本</button>
+<button id="btn2">列表项</button>
+
+</body>
+</html>
