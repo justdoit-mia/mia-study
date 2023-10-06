@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("button").click(function(){
+      $("<span><b>Hello world!</b></span>").replaceAll("p:last");
+    });
+  });
+  </script>
+</head>
+<body>
+  <button>用一个span元素替换最后一个p元素</button><br>
+<p>一个段落</p>
+<p>另一个段落</p>
+</body>
+</html>

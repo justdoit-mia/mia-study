@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("button").click(function(){
+      $("p").unwrap();
+    });
+  });
+  </script>
+  <style>
+  div{background-color:palegreen;}
+  article{background-color:pink;}
+  </style>
+</head>
+<body>
+  <div>
+    <p>这是一个div元素中的段落。</p>
+    </div>
+    <article>
+    <p>这是一个在文章元素的段落。</p>
+    </article>
+    <button>移除每个p元素的父元素</button>
+</body>
+</html>

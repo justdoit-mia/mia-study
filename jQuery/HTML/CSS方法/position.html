@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("button").click(function(){
+      x=$("p").position();
+      alert("顶部位置: " + x.top + "左部位置: " + x.left);
+    });
+  });
+  </script>
+</head>
+<body>
+  <p>一个段落</p>
+<button>返回P元素的顶部和左部的位置</button>
+</body>
+</html>

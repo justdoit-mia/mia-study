@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("button").click(function(){
+      var $x = $("div");
+      $x.prop("color","FF0000");
+      $x.append("color 属性值为: " + $x.prop("color"));
+      $x.removeProp("color");
+      $x.append("<br>现在 color 属性值为: " + $x.prop("color"));
+    });
+  });
+  </script>
+</head>
+<body>
+  <button>添加和删除属性</button>
+<br><br>
+<div></div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("button").click(function(){
+      alert(" div的外部高度: " + $("div").outerHeight());
+    });
+  });
+  </script>
+</head>
+<body>
+  <div style="height:100px;width:300px;padding:10px;margin:3px;border:1px solid blue;background-color:pink;"></div><br>
+<button>显示div的外部高度</button>
+<!-- <p>outerHeight() - 返回元素的高度 (包括内部填充和边框)</p> -->
+
+</body>
+</html>
