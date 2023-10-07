@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .descendants *{ 
+      display: block;
+      border: 2px solid lightgrey;
+      color: lightgrey;
+      padding: 5px;
+      margin: 15px;
+    }
+    </style>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+    $(document).ready(function(){
+      $("ul").children().css({"color":"red","border":"2px solid red"});
+    });
+    </script>
+</head>
+<body >
+  <div style="width:500px;">div (祖先节点)
+    <ul>ul (直接父节点)  
+      <li>li (子节点)
+        <span>span (孙节点)</span>
+      </li>
+    </ul>   
+  </div>
+</body>
+</html>

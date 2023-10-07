@@ -8,15 +8,17 @@
   </script>
   <script>
   $(document).ready(function(){
-    $("button").click(function(){
-      $("p").wrapInner("<b></b>");
-    });
+    $("h1").add("p").add("span").css("background-color","yellow");
   });
   </script>
 </head>
 <body>
-  <p>一个段落</p>
-<p>另一个段落</p>
-<button>在每个p元素的内容上包装一个b元素</button>
+  <h1>欢迎</h1>
+<p>一个P元素</p>
+<p>另一个P元素</p>
+<span>一个span元素</span>
+<span>一个span元素</span><br><br>
+<!-- <div>本示例为现有的H1元素添加相同的CSS样式为p和span元素。</div> -->
+
 </body>
 </html>
