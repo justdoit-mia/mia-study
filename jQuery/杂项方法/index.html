@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("li").click(function(){
+      alert($(this).index());
+    });
+  });
+  </script>
+</head>
+<body>
+  <p>点击获取列表项的索引位置,相对于它的兄弟元素</p>
+<ul>
+<li>A</li>
+<li>B</li>
+<li>C</li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</script>
+<script>
+$(document).ready(function(){
+	$("div").append("<p>" + $("div").context + "</p>").append("<p>" + $("div",document.body).context.nodeName + "</p>");
+}); 
+</script>
+</head>
+<body>
+  <span>内容: <div></div></span>
+<span><b>注意:</b>jQuery 1.10版本的上下文属性被弃用。</span> 
+
+</body>
+</html>

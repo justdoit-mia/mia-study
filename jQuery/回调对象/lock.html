@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+  <script>
+    $(function () { 
+      //将被添加到列表的一个简单的函数
+      var foo = function( value ) {
+        alert( "foo: " + value );
+      }; 
+      var callbacks = $.Callbacks();
+      // 添加函数到列表
+      callbacks.add( foo ); 
+      //传入参数调用所有回调列表
+      callbacks.fire( "hello" );
+      // 输出 "foo: hello"	
+      // 锁定回调列表
+      callbacks.lock();
+      //尝试再次调用回调列表
+      callbacks.fire( "world" );
+      // 当列表被锁定，将不能调用任何项，所以“world”不会被传入执行
+    
+    })
+    </script>
+</body>
+</html>

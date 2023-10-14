@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div { color:red; }
+  </style>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+  <div>First</div>
+<div>Second</div>
+<div>Third</div>
+<div>Fourth</div>
+<script>
+$(function () { 
+	var elems = document.getElementsByTagName("div"); // 返回一个节点列表
+	var arr = jQuery.makeArray(elems);
+	arr.reverse(); //对列表的元素使用一个数组方法
+	$(arr).appendTo(document.body);
+})
+</script>
+ 
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .ancestors *{ 
+      display: block;
+      border: 2px solid lightgrey;
+      color: lightgrey;
+      padding: 5px;
+      margin: 15px;
+    }
+    </style>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+    $(document).ready(function(){
+      $("span").parent().css({"color":"red","border":"2px solid red"});
+    });
+    </script>
+</head>
+<body>
+  <body class="ancestors">body (曾曾祖父节点)
+    <div style="width:500px;">div (曾祖父节点)
+      <ul>ul (祖父节点)  
+        <li>li (直接父节点)
+          <span>span</span>
+        </li>
+      </ul>   
+    </div>
+  </body>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<style>
+	div { 
+		color:blue; 
+	}
+	span { 
+		color:red; 
+	}
+</style>
+</head>
+<body>
+  <div>
+    存储的值为
+    <span></span>
+    和
+    <span></span>
+  </div>
+  <script>
+  $(function () { 
+    var div = $( "div" )[ 0 ];
+    jQuery.data( div, "test", {
+      first: 16,
+      last: "pizza!"
+    });
+    $( "span:first" ).text( jQuery.data( div, "test" ).first );
+    $( "span:last" ).text( jQuery.data( div, "test" ).last );
+  })
+  </script>
+</body>
+</html>

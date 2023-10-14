@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<style>
+	label {
+		display: block;
+		margin: .5em;
+	}
+</style>
+</head>
+<body>
+  <label><input type="checkbox" name="foo"> Foo</label>
+<label><input type="checkbox" name="bar"> Bar</label>
+<script>
+$(function () { 
+	$.fn.extend({
+		check: function() {
+			return this.each(function() {
+				this.checked = true;
+			});
+		},
+		uncheck: function() {
+			return this.each(function() {
+				this.checked = false;
+			});
+		}
+	});
+	// 使用新创建的.check() 方法
+	$( "input[type='checkbox']" ).check();
+})
+</script>
+ 
+</body>
+</html>

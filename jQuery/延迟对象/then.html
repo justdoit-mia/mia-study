@@ -8,17 +8,12 @@
 </head>
 <body>
   <script>
-    var name = "全局变量";
     $(function () { 
-    function test(){
-        var name = "局部变量";
-        alert(name); // 局部变量
-        eval( "alert(name);" ); // 局部变量
-        $.globalEval( "alert(name);" );  // 全局变量
-      }
-      test();
+      $.get("test.php").then(
+        function(){ alert("$.get 成功"); },
+        function(){ alert("$.get 失败!"); }
+      );
     })
     </script>
-     
 </body>
 </html>

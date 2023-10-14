@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+  <script>
+    $(function () { 
+      function asyncEvent(){
+        var dfd = new jQuery.Deferred();
+        // 在一个随机的时间间隔之后 Resolve （解决状态）
+        setTimeout(function(){
+          dfd.resolve("欢呼");
+        }, Math.floor(400+Math.random()*2000));
+        // 在一个随机的时间间隔之后 reject （拒绝状态）
+        setTimeout(function(){
+          dfd.reject("对不起");
+        }, Math.floor(400+Math.random()*2000));
+        // 每半秒显示一个"working..."消息
+        setTimeout(function working(){
+          if ( dfd.state() === "pending" ) {
+            dfd.notify("working... ");
+            setTimeout(working, 500);
+          }
+        }, 1);
+        // 返回 Promise 对象，调用者不能改变延迟对象
+        return dfd.promise();
+      }
+      // 为异步函数附加一个done, fail, 和 progress 处理程序
+      $.when( asyncEvent() ).then(
+        function(status){
+          alert( status+', 事情进展顺利' );
+        },
+        function(status){
+          alert( status+', 这次你失败了' );
+        },
+        function(status){
+          $("body").append(status);
+        }
+      );
+    })
+    </script>
+</body>
+</html>

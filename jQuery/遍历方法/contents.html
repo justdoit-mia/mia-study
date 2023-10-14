@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("button").click(function(){
+      $("div").contents().filter("em").wrap("<b/>");
+    });
+  });
+  </script>
+</head>
+<body>
+  <div><em>Hello world! What a beautiful day!</em></div>
+<button>查找所有文本节点并且包裹它们</button><br>
+
+</body>
+</html>

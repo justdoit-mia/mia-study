@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+  <script>
+    $(function () { 
+      // 将被添加到回调列表的一个简单的函数
+      var foo = function( value ) {
+        alert( "foo:" + value );
+      };
+      var callbacks = $.Callbacks();
+      // 添加一个函数到回调列表
+      callbacks.add( foo );
+      // 在列表参数中传入一个参数
+      callbacks.fire( "hello" );
+      // 输出 "foo: hello"	
+      // 禁用回调列表
+      callbacks.disable();
+      // 测试列表的禁用状态
+      alert( callbacks.disabled() );
+      // 输出: true
+    })
+    </script>
+</body>
+</html>

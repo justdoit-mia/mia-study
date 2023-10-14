@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+  <script>
+    $(function () { 
+      function fun( html ){ 
+        document.body.innerHTML += "<br>" + html; 
+      } 
+      // true
+      fun($.isNumeric( "-10" ));  
+      fun($.isNumeric( "0" ));
+      fun($.isNumeric( 0xFF ));
+      fun($.isNumeric( "0xFF" ));
+      fun($.isNumeric( "8e5" ));
+      fun($.isNumeric( "3.1415" ));
+      fun($.isNumeric( +10 ));
+      fun($.isNumeric( 0 ));
+      //false
+      fun($.isNumeric( "-0x42" ));  
+      fun($.isNumeric( "7.2acdgs" ));
+      fun($.isNumeric( "" ));
+      fun($.isNumeric( {} ));
+      fun($.isNumeric( NaN ));
+      fun($.isNumeric( null ));
+      fun($.isNumeric( true ));
+      fun($.isNumeric( Infinity  ));
+      fun($.isNumeric( undefined  ));	
+    })
+    </script>
+     
+</body>
+</html>

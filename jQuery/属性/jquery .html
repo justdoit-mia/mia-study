@@ -8,23 +8,15 @@
   </script>
   <script>
   $(document).ready(function(){
-    $("button").click(function(){
-      x=$("li").toArray()
-      for (i=0;i<x.length;i++)
-      {
-        alert(x[i].innerHTML);
-      }
+    $("button").on("click",function(){ 
+      var version = $().jquery; 
+      alert("你正在运行的jQuery版本为: " + version); 
     });
-  });
+  }); 
   </script>
 </head>
 <body>
-  <button>输出每个li的值</button>
-<ul>
-  <li>A</li>
-  <li>B</li>
-  <li>C</li>
-</ul>
+  <button>点我!</button>
 
 </body>
 </html>

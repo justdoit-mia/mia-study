@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
+</head>
+<body>
+  <script>
+    $(function () { 
+      function fun( html ){ 
+        document.body.innerHTML += "<br>" + html; 
+      } 
+      fun($.isPlainObject({}));  
+      fun($.isPlainObject( "test" ));
+      fun($.isPlainObject(document.location)); //在 IE 8 中返回 true
+    })
+    </script>
+</body>
+</html>

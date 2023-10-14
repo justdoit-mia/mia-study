@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+      $("p").click(function(){
+          if ($("p").parent().is("div")) {
+              alert("p 的父元素是 div"); 
+          }
+      });
+  });
+  </script>
+</head>
+<body>
+  <div>
+    <p>点我查看父元素是否是 div</p>
+  </div>
+</body>
+</html>

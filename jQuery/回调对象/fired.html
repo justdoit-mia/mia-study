@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+  <script>
+    $(function () { 
+      // 将被添加到列表的一个简单的函数
+      var foo = function( value ) {
+          alert( "foo:" + value );
+      };	 
+      var callbacks = $.Callbacks(); 
+      // 添加函数 "foo" 到列表
+      callbacks.add( foo ); 
+      // 传入参数调用所有回调列表
+      callbacks.fire( "hello" ); // 输出: "foo: hello"
+      callbacks.fire( "world" ); // 输出: "foo: world"	 
+      // 测试回到列表是否只是被调用过一次
+      alert( callbacks.fired() );
+    })
+    </script>
+</body>
+</html>

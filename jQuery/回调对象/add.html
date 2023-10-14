@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+  <script>
+    $(function () { 
+      var foo = function( value ) {
+          alert( "foo: " + value );
+      };
+      // 另一个函数将被添加到列表
+      var bar = function( value ){
+          alert( "bar: " + value );
+      };	 
+      var callbacks = $.Callbacks();	 
+      // 添加函数 "foo" 到列表
+      callbacks.add( foo );	 
+      // 传入参数调用所以回调列表函数
+      callbacks.fire( "hello" );
+      // 输出: "foo: hello"	 
+      // 添加函数 "bar" 到列表
+      callbacks.add( bar );	 
+      // 传入参数调用所以回调列表函数
+      callbacks.fire( "world" );	 
+      // 输出:
+      // "foo: world"
+      // "bar: world"
+    })
+    </script>
+</body>
+</html>

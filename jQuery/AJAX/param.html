@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    personObj=new Object();
+    personObj.firstname="John";
+    personObj.lastname="Doe";
+    personObj.age=50;
+    personObj.eyecolor="blue"; 
+    $("button").click(function(){
+      $("div").text($.param(personObj));
+    });
+  });
+  </script>
+</head>
+<body>
+  
+<button>序列化对象</button>
+<div></div>
+</body>
+</html>

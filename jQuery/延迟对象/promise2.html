@@ -7,11 +7,14 @@
   <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 </head>
 <body>
-  <span></span>
+  <div></div>
 <script>
 $(function () { 
-	var result = $.map( [1, 2, 3], $.noop );
-	document.writeln( result.length ); // 0
+	var div = $( "<div />" );
+	div.promise().done(function( arg1 ) {
+		//弹出 "true"
+		alert( this === div && arg1 === div );
+	});
 })
 </script>
  

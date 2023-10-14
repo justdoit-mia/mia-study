@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("#btn1").click(function(){
+      $("div").data("greeting", "Hello World");
+      alert("问候: " + $("div").data("greeting"));
+    });
+    $("#btn2").click(function(){
+      $("div").removeData("greeting");
+      alert("问候: " + $("div").data("greeting"));
+    });
+  });
+  </script>
+</head>
+<body>
+  <button id="btn1">附加数据到div元素</button><br>
+<button id="btn2">移除附加到div元素的数据</button>
+<div></div>
+
+</body>
+</html>

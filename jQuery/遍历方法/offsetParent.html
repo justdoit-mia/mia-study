@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("button").click(function(){
+      $("p").offsetParent().css("background-color","pink");
+    });
+  });
+  </script>
+</head>
+<body>
+  <button>设置背景颜色</button>
+<div style="border:1px solid black;width:70%;position:absolute;left:10px;top:50px">
+<div style="border:1px solid black;margin:50px;background-color:palegreen">
+<p>点击按钮这一段的设置第一个定位的父元素的背景颜色。</p>
+</div></div>
+</body>
+</html>

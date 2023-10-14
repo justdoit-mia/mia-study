@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<style>
+	div {
+		color: blue;
+	}
+</style>
+</head>
+<body>
+  <div>document中有6个div块</div>
+<div></div>
+<div class="dup"></div>
+<div class="dup"></div>
+<div class="dup"></div>
+<div></div>
+<script>
+$(function () { 
+	// unique() 必须获取一个原始数组
+	var divs = $( "div" ).get();
+	// 添加 3 个div 块元素 
+	divs = divs.concat( $( ".dup" ).get() );
+	$( "div:eq(1)" ).text( "重排序后有 " + divs.length + " 个元素" );
+
+	divs = jQuery.uniqueSort( divs );$.uniqueSort(document.getElementsByTagName("div"));
+	$( "div:eq(2)" ).text( "重排序后有 " + divs.length + " 个元素" )
+		.css( "color", "red" );
+})
+</script>
+</body>
+</html>

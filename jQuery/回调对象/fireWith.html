@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+  <script>
+    $(function () { 
+      //将被添加到列表的一个简单的函数
+      var log = function( value1, value2 ) {
+        alert( "Received: " + value1 + "," + value2 );
+      };
+      
+      var callbacks = $.Callbacks();
+      // 添加函数到列表
+      callbacks.add( log );
+      // 使用上下文"window"调用回调列表
+      // 和一个数组参数
+      callbacks.fireWith( window, ["foo","bar"]);
+      // 输出: "Received: foo, bar"
+    })
+    </script>
+</body>
+</html>

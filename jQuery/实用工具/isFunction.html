@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      color: blue;
+      margin: 2px;
+      font-size: 14px;
+    }
+    span {
+      color: red;
+    }
+  </style>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+  <div>jQuery.isFunction( objs[ 0 ] ) = <span></span></div>
+<div>jQuery.isFunction( objs[ 1 ] ) = <span></span></div>
+<div>jQuery.isFunction( objs[ 2 ] ) = <span></span></div>
+<div>jQuery.isFunction( objs[ 3 ] ) = <span></span></div>
+<div>jQuery.isFunction( objs[ 4 ] ) = <span></span></div>
+<script>
+$(function () { 
+	function stub() {}
+	var objs = [
+		function() {},
+		{ x:15, y:20 },
+		null,
+		stub,
+		"function"
+	];
+	$.each( objs, function( i ) {
+		var isFunc = $.isFunction( objs[ i ]);
+		$( "span" ).eq( i ).text( isFunc );
+	});
+})
+</script>
+</body>
+</html>

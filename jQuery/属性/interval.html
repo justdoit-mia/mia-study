@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("#toggle").on("click",function(){
+      $("div").toggle(5000);
+    });
+    $("#interval").on("click",function(){
+      jQuery.fx.interval = 500;
+    });
+  });
+  </script>
+</head>
+<body>
+  <p>“div切换”按钮被按下时,我们在隐藏和显示div之间切换</p>
+<p><b>注意:</b> 由于jQuery使用一个全局间隔,任何更改此属性生效,没有动画运行或者说动画都应该先停止运行</p>
+<button id="toggle">div切换</button>
+<button id="interval">减少运行动画帧</button>
+<div style="background:#98bf21;height:100px;width:100px;margin:50px;">
+</div>
+
+</body>
+</html>

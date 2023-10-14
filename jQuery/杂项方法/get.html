@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("button").click(function(){
+      x=$("p").get(0);
+      $("div").text(x.nodeName + ": " + x.innerHTML);
+    });
+  });
+  </script>
+</head>
+<body>
+  <p>一个段落</p>
+<button>获取P的DOM元素</button>
+<div></div>
+
+</body>
+</html>

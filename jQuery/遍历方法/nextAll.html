@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .siblings *{ 
+      display: block;
+      border: 2px solid lightgrey;
+      color: lightgrey;
+      padding: 5px;
+      margin: 15px;
+    }
+    </style>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+    $(document).ready(function(){
+      $("li.start").nextAll().css({"color":"red","border":"2px solid red"});
+    });
+    </script>
+</head>
+<body>
+  <div style="width:500px;" class="siblings">
+    <ul>ul (父节点)  
+      <li>li (兄弟节点)</li>
+      <li>li (兄弟节点)</li>
+      <li class="start">li (类名为“star”的兄弟节点)</li>
+      <li>li (类名为“star”的li节点的下一个兄弟节点)</li>
+      <li>li (类名为“star”的li节点的下一个兄弟节点)</li>
+      <li>li (类名为“star”的li节点的下一个兄弟节点)</li>
+    </ul>   
+  </div>
+  <!-- <p>在这个例子中,我们将返回类名为“star”的li节点的所有下一个兄弟节点。</p> -->
+  
+</body>
+</html>

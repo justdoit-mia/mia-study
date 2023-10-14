@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $(document).ajaxStart(function(){
+      $("#wait").css("display","block");
+    });
+    $(document).ajaxComplete(function(){
+      $("#wait").css("display","none");
+    });
+    $("button").click(function(){
+      $("#txt").load("demo_ajax_load.php");
+    });
+  });
+  </script>
+</head>
+<body>
+  <div id="txt"><h2>使用 AJAX 修改文本</h2></div>
+<button>修改内容</button>
+<div id="wait" style="display:none;width:69px;height:89px;border:1px solid black;position:absolute;top:50%;left:50%;padding:2px;"><img src='demo_wait.gif' width="64" height="64" /><br>Loading..</div>
+
+</body>
+</html>
