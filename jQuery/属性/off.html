@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  .<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("#disable").click(function(){
+      jQuery.fx.off = true;
+    });
+    $("#enable").click(function(){
+      jQuery.fx.off = false;
+    });
+    $("#toggle").click(function(){
+      $("div").toggle("slow");
+    });
+  });
+  </script>
+</head>
+<body>
+  <p>当“切换动画”开关按钮被按下时,我们伴着缓慢的动画在隐藏和显示div之间切换。按“启用”或“禁用”来打开和关闭动画。</p>
+<button id="disable">jQuery.fx.off = true ( 禁用 )</button>
+<button id="enable">jQuery.fx.off = false ( 启用 )</button>
+<br><br>
+<button id="toggle">切换动画</button>
+<div style="background:#98bf21;height:100px;width:100px;margin:50px;">
+</div>
+
+</body>
+</html>
