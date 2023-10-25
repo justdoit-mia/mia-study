@@ -1,0 +1,199 @@
+/* 去掉所有标签的默认内外边距 */
+*{
+  /* 外边距为0 */
+  margin: 0;
+  /* 内边距为0 */
+  padding: 0;
+}
+body{
+  background: rgba(238,135,180,0.6);
+}
+/* 去除列表的默认样式 */
+li{
+  list-style: none;
+}
+/* 去掉超链接a标签的默认下划线 */
+a{
+  text-decoration: none;
+}
+/* 导航栏 */
+.header{
+  /* 长度设置为100% */
+  width: 100%;
+  /* 设置高度 */
+  height: 60px;
+  /* 设置行高 */
+  line-height: 60px;
+  /* 设置背景颜色 */
+  background: #FFFFFF;
+  /* 设置阴影 */
+  box-shadow: 2px 3px 5px #ccc;
+}
+/* 导航内容区域 */
+.headerf{
+  /* 设置长度 */
+  width: 1200px;
+  /* 居中显示 */
+  margin: auto;
+}
+/* logo图片 */
+.headerf img{
+  /* 左浮动 靠左对齐 */
+  float: left;
+  /* 设置高度 */
+  height: 35px;
+  /* 12px的上侧外边距 */
+  margin-top: 12px;
+}
+/* 导航栏 */
+.headerf ul{
+  /* 右浮动 靠右对齐 */
+  float: right;
+}
+.headerf ul li{
+  /* 左浮动 靠左对齐 */
+  float: left;
+  /* 100px的左侧外边距 */
+  margin-left: 100px;
+}
+/* 导航栏a标签 */
+.headerf ul li a{
+  /* 设置颜色 */
+  color: #000000;
+  /* 底部内边距设置为5px */
+  padding-bottom: 5px;
+}
+/* 设置class为active 下的a */
+.headerf ul .active a{
+  /* 设置颜色 */
+  color: #ee87b4;
+  /* 设置背景 */
+  border-bottom: 3px solid #ee87b4;
+}
+/* 鼠标移入效果 */
+.headerf ul li a:hover{
+  /* 设置颜色 */
+  color: #ee87b4;
+  /* 设置背景 */
+  border-bottom: 3px solid #ee87b4;
+}
+/* 轮播图 */
+.swiper {
+  /* 相对定位 */
+  position: relative;
+  /* 设置长度 */
+  width: 1200px;
+  /* 设置高度 */
+  height: 380px;
+  /* 上外边距20px 左右居中 下外边距为20 */
+  margin: 20px auto;
+  /* 超出隐藏不显示 */
+  overflow: hidden;
+}
+
+.wrap {
+  /* 相对定位 */
+  position: relative;
+  /* 设置长度 */
+  width: 100%;
+  /* 设置高度 */
+  height: 100%;
+  /* 居中显示 */
+  margin: auto;
+  /* 超出隐藏不显示 */
+  overflow: hidden;
+}
+
+.warp ul {
+  /* 绝对定位 */
+  position: absolute;
+}
+
+.wrap ul li {
+  /* 设置长度 */
+  width: 100%;
+  /* 设置高度 */
+  height: 100%;
+}
+
+.wrap ul li img {
+  /* 设置图片长度 */
+  width: 100%;
+  /* 设置图片高度 */
+  height: 380px;
+  /* 图片超出大小自动延展 防止压缩 */
+  object-fit: cover;
+  /* 设置3px的圆形弧度 */
+  border-radius: 3px;
+}
+/* 底部下标 */
+.wrap ol {
+  /* 绝对定位 */
+  position: absolute;
+  /* 靠.wrap右侧5% */
+  right: 5%;
+  /* 靠.wrap底部20px */
+  bottom: 20px;
+}
+
+.wrap ol li {
+  /* 去除默认属性 */
+  list-style: none;
+  /* 设置高度 */
+  height: 10px;
+  /* 设置长度 */
+  width: 10px;
+  /* 边框 */
+  border: 1px solid #FFF;
+  /* 设置50%的圆弧 */
+  border-radius: 50%;
+  /* 左侧外边距为12px */
+  margin-left: 12px;
+  /* 左浮动 */
+  float: left;
+  /* 鼠标移上去 */
+  cursor: pointer;
+  /* 字体为0 隐藏文字 */
+  font-size: 0px;
+}
+
+.wrap ol .on {
+  /* 选中的背景 */
+  background: #FE6700;
+}
+/* 图集 */
+.img-list ul{
+  /* flex布局 */
+  display: flex;
+  /* 两端对齐 */
+  justify-content: space-between;
+  /* 设置长度 */
+  width: 1200px;
+  /* 上下外边距为30px 左右居中 */
+  margin: 30px auto;
+}
+/* 小盒子样式 */
+.img-list ul li{
+  /* 鼠标移入出现触手 */
+  cursor: pointer;
+  /* 相对定位 */
+  position: relative;
+  /* 设置长度 */
+  width: 18%;
+  /* 设置高度 */
+  height: 216px;
+  /* 设置圆弧度 */
+  border-radius: 100%;
+  /* 超出隐藏 */
+  overflow: hidden;
+  /* 设置阴影 */
+  box-shadow: 2px 3px 5px #CCCCCC;
+}
+/* 角色介绍 */
+.img-list ul li img{
+  /* 设置成块级元素 */
+  display: block;
+  /* 设置长度 */
+  width: 100%;
+  /* 设置高度 */
+  height: 100%;
