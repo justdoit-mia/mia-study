@@ -197,3 +197,232 @@ a{
   width: 100%;
   /* 设置高度 */
   height: 100%;
+     /* 图片自适应裁剪 */
+     object-fit: cover;
+     /* 动画效果执行时间 */
+     transition: all 0.3s;
+     opacity: 0.8;
+ }
+ /* 文字描述 */
+ .img-list ul li h3{
+     /* 设置绝对定位 */
+     position: absolute;
+     /* 距离父级上侧0 */
+     top: 0;
+     /* 距离父级左侧0 */
+     left: 0;
+     /* 设置长度 */
+     width: 100%;
+     /* 文字居中 */
+     text-align: center;
+     /* 设置高度 */
+     height: 216px;
+     /* 设置行高 */
+     line-height: 216px;
+     /* 设置颜色 */
+     color: #FFFFFF;
+     /* 设置字体大小 */
+     font-size: 24px;
+     /* 设置文字字体粗细 */
+     font-weight: normal;
+     /* 文字间距 */
+     letter-spacing: 3px;
+ }
+ /* 鼠标移入效果 */
+ .img-list ul li:hover img{
+     /* 逆时针旋转360deg */
+     transform: rotate(-360deg);
+     opacity: 1;
+ }
+ /* 剧情简介 */
+ .about{
+     /* 弹性布局 */
+     display: flex;
+     /* 两端对齐 */
+     justify-content: space-between;
+     /* 设置长度 */
+     width: 1200px;
+     /* 居中显示 */
+     margin: auto;
+     /* 背景颜色 */
+     background: #FFFFFF;
+     /* 阴影 */
+     box-shadow: 2px 1px 10px #CCCCCC;
+ }
+ .about img{
+     /* 设置长度 */
+     width: 550px;
+     /* 设置高度 */
+     height: 100%;
+     /* 防止图片压缩 */
+     object-fit: cover;
+ }
+ .about-text{
+     /* 设置长度 */
+     width: 590px;
+     /* 上下左右内边距为20 */
+     padding: 20px;
+ }
+ .about-text h4{
+     /* 设置字体 */
+     font-size: 24px;
+     /* 设置颜色 */
+     color: #333333;
+     /* 字体粗细 */
+     font-weight: normal;
+     /* 文字间距 */
+     letter-spacing: 2px;
+     /* 下外边距为15px */
+     margin-bottom: 15px;
+ }
+ .about-text p{
+     /* 设置行高 */
+     line-height: 2.6;
+ }
+ .about-text a{
+     /* 设置成块级元素 单独一行显示 */
+     display: block;
+     /* 设置背景颜色 */
+     background: #ee87b4;
+     /* 字体大小 */
+     font-size: 14px;
+     /* 字体颜色 */
+     color: #FFFFFF;
+     /* 设置长度 */
+     width: 100px;
+     /* 设置高度 */
+     height: 40px;
+     /* 设置行高 */
+     line-height: 40px;
+     /* 文字居中 */
+     text-align: center;
+     /* 上侧外边距为10 */
+     margin-top: 20px;
+       /* 圆弧为6px */
+    border-radius: 6px;
+  }
+  /* 精彩剧集 */
+.text{
+  /* 弹性布局 */
+  display: flex;
+  /* 两端对齐 */
+  justify-content: space-between;
+  /* 设置长度 */
+  width: 1200px;
+  /* 上下外边距50 左右居中 */
+  margin: 50px auto;
+}
+/* 文章 */
+.text-list{
+  /* 鼠标移入触手 */
+  cursor: pointer;
+  /* 弹性布局 */
+  display: flex;
+  /* 换行处理 */
+  flex-wrap: wrap;
+  /* 两端对齐 */
+  justify-content: space-between;
+  /* 设置长度 */
+  width: 30%;
+  /* 上下左右内边距为 10 */
+  padding: 10px;
+  /* 背景颜色 */
+  background: #FFFFFF;
+  /* 盒子阴影 */
+  box-shadow: 2px 1px 10px #CCC;
+  /* 动画时间 */
+  transition: all 0.3s;
+}
+.text-list:hover{
+  transform: translateY(-20px);
+}
+.text .text-list .list-img{
+  /* 设置长度 */
+  width: 100%;
+}
+.text .text-list .list-img img{
+  /* 设置长度 */
+  width: 100%;
+  /* 设置行高 */
+  height: 220px;
+  /* 防止图片变形 */
+  object-fit: cover;
+}
+.text .text-list .list-text{
+  /* 设置长度 */
+  width: 100%;
+}
+.text .text-list .list-text h3{
+  /* 上下外边距为5 左右为0 */
+  margin: 5px 0;
+  /* 设置字体颜色 */
+  color: #333;
+}
+.text .text-list .list-text p{
+  /* 设置行高 */
+  line-height: 1.6;
+  /* 设置字体大小 */
+  font-size: 15px;
+  /* 设置字体颜色 */
+  color: #777777;
+}
+/* 底部 */
+.footer{
+  /* 设置长度 */
+  width: 100%;
+  /* 上下内边距10 左右0 */
+  padding: 10px 0;
+  /* 字体颜色 */
+  color: #FFF;
+  /* 背景颜色 */
+  background: #333;
+  /* 文字居中 */
+  text-align: center;
+  /* 字体大小 */
+  font-size: 14px;
+}
+/* 剧情简介 */
+/* 顶部大图 */
+.about-banner{
+  /* 设置长度 */
+  width: 100%;
+  /* 设置高度 */
+  height: auto;
+}
+.about-banner img{
+  /* 设置成块级元素防止图片空隙 */
+  display: block;
+  /* 设置长度 */
+  width: 100%;
+}
+/* 关于 文字部分 */
+.about-page{
+  /* 设置长度 */
+  width: 1160px;
+  /* 上下20px 左右居中显示 */
+  margin: 20px auto;
+  /* 内边距为10px */
+  padding: 10px;
+  /* 背景颜色 */
+  background: #FFFFFF;
+}
+/* 文字标题 */
+.about-page h3{
+  /* 左右0 上下20px 外边距 */
+  margin: 20px 0;
+  /* 字体大小 */
+  font-size: 24px;
+  /* 文字间距 */
+  letter-spacing: 5px;
+}
+/* 文字内容 */
+.about-page p{
+  /* 设置行高 */
+  line-height: 1.8;
+  /* 设置文字颜色 */
+  color: #999999;
+  /* 字体大小 */
+  font-size: 17px;
+  /* 下侧外边距为10px */
+  margin-bottom: 10px;
+}
