@@ -426,3 +426,118 @@ a{
   /* 下侧外边距为10px */
   margin-bottom: 10px;
 }
+/* 图集 */
+.img{
+  /* 相对定位 */
+  position: relative;
+  /* 设置长度 */
+  width: 1200px;
+  /* 上下外边距50px 左右居中 */
+  margin: 50px auto;
+}
+.img ul{
+  /* 弹性布局 */
+  display: flex;
+  /* 换行处理 */
+  flex-wrap: wrap;
+  /* 子元素横向两端对齐 */
+  justify-content: space-between;
+}
+.img ul li {
+  list-style: none;
+  /* 相对定位 */
+  position: relative;
+  /* 设置长度 */
+  width: 280px;
+  /* 设置高度 */
+  height: 220px;
+  /* 下侧外边距为20px */
+  margin-bottom: 20px;
+}
+.img img{
+  display: block;
+  /* 设置长度 */
+  width: 100%;
+  /* 设置高度 */
+  height: 100%;
+  /* 防止图片变形 */
+  object-fit: cover;
+}
+.img p{
+  /* 绝对定位 */
+  position: absolute;
+  /* 父级底部的0位置 */
+  bottom: 0;
+  /* 父级左侧的0位置 */
+  left: 0;
+  /* 设置字体大小 */
+  font-size: 16px;
+  /* 设置长度 */
+  width: 92%;
+  /* 上下左右的内边距为父级的4% */
+  padding: 4%;
+  /* 设置字体颜色 */
+  color: #FFFFFF;
+  /* 设置背景颜色*/
+  background-color: rgba(0,0,0,0.4);
+}
+.jcjq{
+  /* 弹性布局 */
+  display: flex;
+  /* 换行处理 */
+  flex-wrap: wrap;
+  /* 两端对齐 */
+  justify-content: space-between;
+  /* 设置长度 */
+  width: 1200px;
+  /* 上下外边距30px 左右居中 */
+  margin: 30px auto;
+}
+.jcjq .jcjq-list{
+  /* 弹性布局 */
+  display: flex;
+  /* 换行处理 */
+  flex-wrap: wrap;
+  /* 两端对齐 */
+  justify-content: space-between;
+  /* 设置长度 */
+  width: 100%;
+  /* 背景颜色 */
+  background-color: #FFFFFF;
+  /* 上下外边距20 左右为0 */
+  margin: 20px 0;
+  /* 设置阴影 */
+  box-shadow: 2px 1px 10px #CCC;
+}
+.jcjq .jcjq-list .list-img{
+  /* 设置长度 */
+  width: 30%;
+}
+.jcjq .jcjq-list .list-img img{
+  /* 设置为块级元素 */
+  display: block;
+  /* 设置长度 */
+  width: 100%;
+  /* 设置行高 */
+  height: 220px;
+  /* 防止图片变形 */
+  object-fit: cover;
+}
+.jcjq .jcjq-list .list-jcjq{
+  /* 设置长度 */
+  width: 68%;
+}
+.jcjq .jcjq-list .list-jcjq h3{
+  /* 上外边距20 右外边距10 下外边距20 左外边距0 */
+  margin: 20px 10px 20px 0;
+}
+.jcjq .jcjq-list .list-jcjq p{
+  /* 设置行高 */
+  line-height: 1.8;
+  /* 设置字体大小 */
+  font-size: 15px;
+  /* 右侧外边距为20 */
+  margin-right: 20px;
+  /* 设置字体颜色 */
+  color: #777777;
+}
