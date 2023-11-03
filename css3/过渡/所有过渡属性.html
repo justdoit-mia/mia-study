@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Document</title>
+  <style> 
+    div
+    {
+      width:100px;
+      height:100px;
+      background:red;
+      transition-property:width;
+      transition-duration:1s;
+      transition-timing-function:linear;
+      transition-delay:2s;
+      /* Safari */
+      -webkit-transition-property:width;
+      -webkit-transition-duration:1s;
+      -webkit-transition-timing-function:linear;
+      -webkit-transition-delay:2s;
+    }
+    
+    div:hover
+    {
+      width:200px;
+    }
+    </style>
+</head>
+<body>
+  <div></div>
+
+<p>鼠标移动到 div 元素上，查看过渡效果。</p>
+<p><b>注意：</b> 过渡效果需要等待两秒后才开始。</p>
+
+</body>
+</html>

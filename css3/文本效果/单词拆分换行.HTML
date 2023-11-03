@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style> 
+    p.test1
+    {
+      width:9em; 
+      border:1px solid #000000;
+      word-break:keep-all;
+    }
+    
+    p.test2
+    {
+      width:9em; 
+      border:1px solid #000000;
+      word-break:break-all;
+    }
+    </style>
+</head>
+<body>
+  <p class="test1"> This paragraph contains some text. This line will-break-at-hyphenates.</p>
+<p class="test2"> This paragraph contains some text: The lines will break at any character.</p>
+</body>
+</html>

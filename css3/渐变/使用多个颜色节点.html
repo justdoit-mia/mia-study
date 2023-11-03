@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #grad1 {
+        height: 200px;
+      background-color: red; /* 浏览器不支持的时候显示 */
+        background-image: linear-gradient(red, green, blue); /* 标准的语法（必须放在最后） */
+    }
+    
+    #grad2 {
+        height: 200px;
+        background-color: red; /* 浏览器不支持的时候显示 */
+      background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet); /* 标准的语法（必须放在最后） */
+    }
+    
+    #grad3 {
+        height: 200px;
+      background-color: red; /* 浏览器不支持的时候显示 */
+      background-image: linear-gradient(red 10%, green 85%, blue 90%); /* 标准的语法（必须放在最后） */
+    }
+    </style>
+</head>
+<body>
+  <h3>3 个颜色结点（均匀分布）</h3>
+<div id="grad1"></div>
+
+<h3>7 个颜色结点（均匀分布）</h3>
+<div id="grad2"></div>
+
+<h3>3 个颜色结点（不均匀分布）</h3>
+<div id="grad3"></div>
+</body>
+</html>
