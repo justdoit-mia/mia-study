@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style> 
+    .div1 {
+        width: 300px;
+        height: 100px;
+        border: 1px solid blue;
+        box-sizing: border-box;
+    }
+    
+    .div2 {
+        width: 300px;
+        height: 100px;    
+        padding: 50px;
+        border: 1px solid red;
+        box-sizing: border-box;
+    }
+    </style>
+
+<style>
+  * {
+      box-sizing: border-box;
+  } 
+  
+  input, textarea {
+      width: 100%;
+  }
+  </style>
+</head>
+<body>
+  <div class="div1">两个 div 现在是一样大小的!</div>
+<br>
+<div class="div2">菜鸟教程!</div>
+
+<form action="action_page.php">
+  用户名:<br>
+  <input type="text" name="username" value="runoob"><br>
+  邮箱:<br>
+  <input type="text" name="email" value="429240967@qq.com"><br>
+  评论:<br>
+  <textarea name="message" rows="5" cols="30">
+  </textarea>
+  <br><br>
+  <input type="submit" value="提交">
+  </form> 
+</body>
+</html>

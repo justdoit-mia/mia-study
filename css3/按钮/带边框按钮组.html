@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .button {
+        background-color: #4CAF50; /* Green */
+        border: 1px solid green;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        float: left;
+    }
+    
+    .button:hover {
+        background-color: #3e8e41;
+    }
+    </style>
+
+<style>
+  .btn-group button {
+    background-color: #04AA6D; /* 绿色背景 */
+    border: 1px solid green; /* 绿色边框 */
+    color: white; /* 白色文本 */
+    padding: 10px 24px; /* 内边距离、 */
+    cursor: pointer; /* 指针/手形图标 */
+    float: left; /* 并排浮动按钮 */
+  }
+  
+  /* 清除浮动 */
+  .btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .btn-group button:not(:last-child) {
+    border-right: none; /* 防止边框重叠 */
+  }
+  
+  /* 鼠标移动到按钮上的效果 */
+  .btn-group button:hover {
+    background-color: #3e8e41;
+  }
+  </style>
+</head>
+<body>
+  <h2>带边框按钮组</h2>
+<p>创建带边框的按钮组:</p>
+
+<button class="button">Button</button>
+<button class="button">Button</button>
+<button class="button">Button</button>
+<button class="button">Button</button>
+
+<p style="clear:both"><br>记住要清除浮动，否则下一个 p 元素的按钮也会显示在同一行。</p>
+
+
+<h1>按钮组</h1>
+
+<div class="btn-group">
+  <button>Google</button>
+  <button>Runoob</button>
+  <button>Apple</button>
+</div>
+</body>
+</html>

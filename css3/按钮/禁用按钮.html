@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    
+    .disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+    </style>
+</head>
+<body>
+  <h2>禁用按钮</h2>
+<p>我们可以使用 opacity 属性为按钮添加透明度 (看起来类似 "disabled" 属性效果)。</p>
+
+<button class="button">正常按钮</button>
+<button class="button disabled">禁用按钮</button>
+</body>
+</html>
