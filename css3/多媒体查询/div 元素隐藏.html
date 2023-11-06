@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div.example {
+      background-color: yellow;
+      padding: 20px;
+    }
+    
+    @media screen and (max-width: 600px) {
+      div.example {
+        display: none;
+      }
+    }
+    </style>
+</head>
+<body>
+  <h2>屏幕可视尺寸小于 600 px 时，隐藏以下元素。</h2>
+
+<div class="example">我是会隐藏的元素。</div>
+
+<p>重置浏览器大小，查看效果。</p>
+
+</body>
+</html>
