@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .grid-container {
+      display: grid;
+      height: 400px;
+      align-content: space-evenly;
+      grid-template-columns: auto auto auto;
+      grid-gap: 10px;
+      background-color: #2196F3;
+      padding: 10px;
+    }
+    
+    .grid-container > div {
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      padding: 20px 0;
+      font-size: 30px;
+    }
+    </style>
+</head>
+<body>
+  <h1>align-content 属性</h1>
+
+<p>使用<em>align-content</em> 属性用于设置垂直方向上的网格元素在容器中的对齐方式。</p>
+
+<p>"space-evenly" 属性值用于设置容器中每一行间隔相等:</p>
+
+<div class="grid-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+</div>
+
+</body>
+</html>
