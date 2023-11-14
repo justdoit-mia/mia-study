@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>内联表单</h2>
+    <p>屏幕宽度在大于等于 576px 时才会水平显示。如果小于 576px 则会生成堆叠表单。</p>
+    <form class="form-inline" action="/action_page.php">
+      <label for="email2" class="mb-2 mr-sm-2">Email:</label>
+      <input type="text" class="form-control mb-2 mr-sm-2" id="email2" placeholder="Enter email" name="email">
+      <label for="pwd2" class="mb-2 mr-sm-2">Password:</label>
+      <input type="text" class="form-control mb-2 mr-sm-2" id="pwd2" placeholder="Enter password" name="pswd">
+      <div class="form-check mb-2 mr-sm-2">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" name="remember"> Remember me
+        </label>
+      </div>    
+      <button type="submit" class="btn btn-primary mb-2">Submit</button>
+    </form>
+  </div>
+  
+</body>
+</html>
