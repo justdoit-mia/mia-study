@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+<style>
+.text-danger {
+	width: 100px;
+	height: 100px;
+	background: red;
+}
+.active {
+	width: 100px;
+	height: 100px;
+	background: green;
+}
+</style>
+</head>
+<body>
+  <div id="app">
+    <div v-bind:class="[errorClass ,isActive ? activeClass : '']"></div>
+  </div>
+  
+  <script>
+  new Vue({
+    el: '#app',
+    data: {
+      isActive: true,
+    activeClass: 'active',
+      errorClass: 'text-danger'
+    }
+  })
+  </script>
+</body>
+</html>
