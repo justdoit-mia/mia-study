@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container mt-3">
+    <h2>自定义复选框</h2>
+    <p>如果要自定义一个复选框，可以设置 &lt;div&gt; 为父元素，类为 .custom-control 和 .custom-checkbox，复选框作为子元素放在该 &lt;div&gt; 里头，然后复选框设置为 type="checkbox"，类为 .custom-control-input。</p>
+    <p>复选框的文本使用 label 标签，标签使用 .custom-control-label 类，label 的 for 属性值需要匹配复选框的 id。</p>
+    <form action="/action_page.php">
+      <div class="custom-control custom-checkbox mb-3">
+        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+        <label class="custom-control-label" for="customCheck">自定义复选框</label>
+      </div>
+      <input type="checkbox" id="defaultCheck" name="example2">
+      <label for="defaultCheck">默认复选框</label>
+      <br>
+      <button type="submit" class="btn btn-primary">提交</button>
+    </form>
+  </div>
+</body>
+</html>
