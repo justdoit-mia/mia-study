@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+  <div id = "databinding"></div>
+<script type = "text/javascript">
+var mixin = {
+	methods: {
+		hellworld: function () {
+			document.write('HelloWorld 方法' + '<br>');
+		},
+		samemethod: function () {
+			document.write('Mixin：相同方法名' + '<br>');
+		}
+	}
+};
+var vm = new Vue({
+	mixins: [mixin],
+	methods: {
+		start: function () {
+			document.write('start 方法' + '<br>');
+		},
+		samemethod: function () {
+			document.write('Main：相同方法名' + '<br>');
+		}
+	}
+});
+vm.hellworld();
+vm.start();
+vm.samemethod();
+</script>
+</body>
+</html>
