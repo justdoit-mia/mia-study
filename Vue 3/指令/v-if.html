@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/vue/3.2.36/vue.global.min.js"></script>
+</head>
+<body>
+  <div id="app" class="demo">
+    <p v-if="showMessage">Hello Vue!</p>
+    <p v-else>Goodbye Vue!</p>
+</div>
+
+<script>
+const HelloVueApp = {
+  data() {
+    return {
+      showMessage: true
+    }
+  }
+}
+
+Vue.createApp(HelloVueApp).mount('#app')
+</script>
+</body>
+</html>
