@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+  <div id="app">
+    <ul>
+      <li v-for="n in evenNumbers">{{ n }}</li>
+    </ul>
+  </div>
+   
+  <script>
+  const app = {
+      data() {
+          return {
+              numbers: [ 1, 2, 3, 4, 5 ]
+         }
+      },
+      computed: {
+          evenNumbers() {
+              return this.numbers.filter(number => number % 2 === 0)
+          }
+      }
+  }
+   
+  Vue.createApp(app).mount('#app')
+  </script>
+</body>
+</html>
