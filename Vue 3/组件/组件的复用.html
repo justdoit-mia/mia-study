@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/vue/3.2.36/vue.global.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <button-counter></button-counter>
+	<button-counter></button-counter>
+	<button-counter></button-counter>
+</div>
+
+<script>
+// 创建一个Vue 应用
+const app = Vue.createApp({})
+
+// 定义一个名为 button-counter 的新全局组件
+app.component('button-counter', {
+  data() {
+    return {
+      count: 0
+    }
+  },
+  template: `
+    <button @click="count++">
+      点了 {{ count }} 次！
+    </button>`
+})
+app.mount('#app')
+</script>
+</body>
+</html>

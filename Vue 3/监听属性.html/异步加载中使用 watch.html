@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 因为 AJAX 库和通用工具的生态已经相当丰富，Vue 核心代码没有重复 -->
+<!-- 提供这些功能以保持精简。这也可以让你自由选择自己更熟悉的工具。 -->
+<script src="https://cdn.staticfile.org/axios/0.27.2/axios.min.js"></script>
+<script src="https://cdn.staticfile.org/vue/3.2.37/vue.global.min.js"></script>
+</head>
+<body>
+  <div id="watch-example">
+    <p>
+      输入一个问题，以 ? 号结尾输出答案:
+      <input v-model="question" />
+    </p>
+    <p>{{ answer }}</p>
+  </div>  
+  <script>
+  const watchExampleVM = Vue.createApp({
+     data() {
+        return {
+           question: '',
+           answer: '每个问题结尾需要输入 ? 号。'
+        }
+     },
+     watch: {
+        // 每当问题改变时，此功能将运行，以 ? 号结尾，兼容中英文 ?
+        question(newQuestion, oldQuestion) {
+           if (newQuestion.indexOf('?') > -1 || newQuestion.indexOf('？') > -1) {
+              this.getAnswer()
+           }
+        }
+     },
+     methods: {
+        getAnswer() {
+           this.answer = '加载中...'
+           axios
+              .get('/try/ajax/json_vuetest.php')
+              .then(response => {
+              this.answer = response.data.answer
+           })
+              .catch(error => {
+              this.answer = '错误! 无法访问 API。 ' + error
+           })
+        }
+     }
+  }).mount('#watch-example')
+  </script>
+</body>
+</html>

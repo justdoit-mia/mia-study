@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/vue/3.2.36/vue.global.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <site-name title="Google"></site-name>
+    <site-name title="Runoob"></site-name>
+    <site-name title="Taobao"></site-name>
+  </div>
+   
+  <script>
+  const app = Vue.createApp({})
+   
+  app.component('site-name', {
+    props: ['title'],
+    template: `<h4>{{ title }}</h4>`
+  })
+   
+  app.mount('#app')
+  </script>
+</body>
+</html>

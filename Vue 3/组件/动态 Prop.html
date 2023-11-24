@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/vue/3.2.36/vue.global.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <site-info
+      v-for="site in sites"
+      :id="site.id"
+      :title="site.title"
+    ></site-info>
+  </div>
+   
+  <script>
+  const Site = {
+    data() {
+      return {
+        sites: [
+          { id: 1, title: 'Google' },
+          { id: 2, title: 'Runoob' },
+          { id: 3, title: 'Taobao' }
+        ]
+      }
+    }
+  }
+   
+  const app = Vue.createApp(Site)
+   
+  app.component('site-info', {
+    props: ['id','title'],
+    template: `<h4>{{ id }} - {{ title }}</h4>`
+  })
+   
+  app.mount('#app')
+  </script>
+</body>
+</html>

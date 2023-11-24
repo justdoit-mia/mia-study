@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/vue/3.2.36/vue.global.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <runoob-a></runoob-a>
+</div>
+<script>
+ 
+var runoobA = {
+  template: '<h1>自定义组件!</h1>'
+}
+ 
+const app = Vue.createApp({
+  components: {
+    'runoob-a': runoobA
+  }
+})
+ 
+app.mount('#app')
+</script>
+</body>
+</html>

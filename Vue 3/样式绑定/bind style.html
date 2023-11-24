@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+  <div id="app">
+    <div :style="[baseStyles, overridingStyles]">菜鸟教程</div>
+</div>
+
+<script>
+const app = {
+    data() {
+        return {
+			baseStyles: {
+                color: 'green',
+                fontSize: '30px'
+            },
+	        overridingStyles: {
+                'font-weight': 'bold'
+            }
+        }
+    }
+}
+
+Vue.createApp(app).mount('#app')
+</script>
+</body>
+</html>

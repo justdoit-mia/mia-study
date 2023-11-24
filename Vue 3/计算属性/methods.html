@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+  <div id="app">
+    <p>原始字符串: {{ message }}</p>
+    <p>使用 computed 计算后反转字符串: {{ reversedMessage }}</p>
+    <p>使用 methods 计算后反转字符串: {{ reversedMessage2() }}</p>
+  </div>
+      
+  <script>
+  const app = {
+    data() {
+      return {
+        message: 'RUNOOB!!'
+      }
+    },
+    computed: {
+      // 计算属性的 getter
+      reversedMessage: function () {
+        // `this` 指向 vm 实例
+        return this.message.split('').reverse().join('')
+      }
+    },
+    methods: {
+      reversedMessage2: function () {
+        return this.message.split('').reverse().join('')
+      }
+    }
+  }
+   
+  Vue.createApp(app).mount('#app')
+  </script>
+</body>
+</html>
