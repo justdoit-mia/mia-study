@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+  <div id="app">
+    <button @click="counter += 1">增加 1</button>
+    <p>这个按钮被点击了 {{ counter }} 次。</p>
+  </div>
+  
+  <script>
+  const app = {
+    data() {
+      return {
+        counter: 0
+      }
+    }
+  }
+  
+  Vue.createApp(app).mount('#app')
+  </script>
+</body>
+</html>
