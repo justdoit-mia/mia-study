@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+  <div id = "app"></div>
+<script type = "text/javascript">
+// 定义混入对象
+const myMixin = {
+  created() {
+    this.hello()
+  },
+  methods: {
+    hello() {
+      document.write('欢迎来到混入实例-RUNOOB!')
+    }
+  }
+}
+ 
+// 定义一个应用，使用混入
+const app = Vue.createApp({
+  mixins: [myMixin]
+})
+ 
+app.mount('#app') // => "欢迎来到混入实例-RUNOOB!"
+</script>
+</body>
+</html>

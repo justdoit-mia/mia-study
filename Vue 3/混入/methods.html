@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  const myMixin = {
+    methods: {
+      foo() {
+        console.log('foo')
+      },
+      conflicting() {
+        console.log('from mixin')
+      }
+    }
+  }
+   
+  const app = Vue.createApp({
+    mixins: [myMixin],
+    methods: {
+      bar() {
+        console.log('bar')
+      },
+      conflicting() {
+        console.log('from self')
+      }
+    }
+  })
+   
+  const vm = app.mount('#app')
+   
+  vm.foo() // => "foo"
+  vm.bar() // => "bar"
+  vm.conflicting() // => "from self"
+</script>
+</body>
+</html>
